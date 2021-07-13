@@ -6,17 +6,12 @@ export default {
 	argTypes: {
 		type: {
 			control: 'select',
-			options: ['primary', 'secondary'],
+			options: ['primary', 'secondary', 'disabled'],
 		},
 		size: {
 			control: {
 				type: 'select',
 				options: ['small', 'medium', 'large']
-			},
-		},
-		disabled: {
-			control: {
-				type: 'boolean'
 			},
 		},
 		loading: {
@@ -51,6 +46,12 @@ Primary.args = {
 export const Secondary = Template.bind({});
 Secondary.args = {
 	type: 'secondary',
+	label: 'Button',
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+	type: 'disabled',
 	label: 'Button',
 };
 

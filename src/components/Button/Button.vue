@@ -2,7 +2,7 @@
   <el-button
     type="primary"
     :plain="props.type === 'secondary'"
-    :disabled="props.disabled"
+    :disabled="props.type === 'disabled'"
     :loading="props.loading"
     :size="$options.mapToSize(props.size)"
     round
@@ -35,21 +35,17 @@ export default {
     },
     type: {
       type: String,
-      default: "primary",
+      default: 'primary',
       validator: function (value) {
-        return ["primary", "secondary"].indexOf(value) !== -1;
+        return ['primary', 'secondary', 'disabled'].indexOf(value) !== -1;
       },
     },
     size: {
       type: String,
-      default: "medium",
+      default: 'medium',
       validator: function (value) {
-        return ["small", "medium", "large"].indexOf(value) !== -1;
+        return ['small', 'medium', 'large'].indexOf(value) !== -1;
       },
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
     },
     loading: {
       type: Boolean,
