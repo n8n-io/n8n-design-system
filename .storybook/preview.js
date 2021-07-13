@@ -1,3 +1,5 @@
+import './font-awesome-icons';
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {

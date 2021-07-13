@@ -1,86 +1,64 @@
-<template>
-  <button type="button" :class="classes" @click="onClick" :style="style">{{ label }}</button>
+<template functional>
+  <el-button
+    type="primary"
+    :plain="props.type === 'secondary'"
+    :disabled="props.disabled"
+    :loading="props.loading"
+    :size="$options.mapToSize(props.size)"
+    round
+  >
+    <N8nIcon v-if="props.icon" :icon="props.icon" />
+    {{ props.label }}
+  </el-button>
 </template>
 
-<script>
-export default {
-  name: 'my-button',
+<script >
+import Vue from "vue";
+import { Button } from "element-ui";
+import N8nIcon from '../Icon/Icon.vue';
 
+Vue.component("ElButton", Button);
+Vue.component("N8nIcon", N8nIcon);
+
+const sizeMap = {
+  small: "small",
+  medium: "medium",
+  large: "",
+};
+
+export default {
+  name: "n8n-button",
   props: {
     label: {
       type: String,
       required: true,
     },
-    primary: {
-      type: Boolean,
-      default: false,
+    type: {
+      type: String,
+      default: "primary",
+      validator: function (value) {
+        return ["primary", "secondary"].indexOf(value) !== -1;
+      },
     },
     size: {
       type: String,
-      default: 'medium',
+      default: "medium",
       validator: function (value) {
-        return ['small', 'medium', 'large'].indexOf(value) !== -1;
+        return ["small", "medium", "large"].indexOf(value) !== -1;
       },
     },
-    backgroundColor: {
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+    loading: {
+      type: Boolean,
+      default: false,
+    },
+    icon: {
       type: String,
     },
   },
-
-  computed: {
-    classes() {
-      return {
-        'storybook-button': true,
-        'storybook-button--primary': this.primary,
-        'storybook-button--secondary': !this.primary,
-        [`storybook-button--${this.size}`]: true,
-      };
-    },
-    style() {
-      return {
-        backgroundColor: this.backgroundColor,
-      };
-    },
-  },
-
-  methods: {
-    onClick() {
-      this.$emit('onClick');
-    },
-  },
+  mapToSize: (size) => sizeMap[size],
 };
 </script>
-
-<style lang="scss">
-.storybook-button {
-	font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-weight: 700;
-	border: 0;
-	border-radius: 3em;
-	cursor: pointer;
-	display: inline-block;
-	line-height: 1;
-      }
-      .storybook-button--primary {
-	color: white;
-	background-color: #1ea7fd;
-      }
-      .storybook-button--secondary {
-	color: #333;
-	background-color: transparent;
-	box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-      }
-      .storybook-button--small {
-	font-size: 12px;
-	padding: 10px 16px;
-      }
-      .storybook-button--medium {
-	font-size: 14px;
-	padding: 11px 20px;
-      }
-      .storybook-button--large {
-	font-size: 16px;
-	padding: 12px 24px;
-      }
-      
-</style>
