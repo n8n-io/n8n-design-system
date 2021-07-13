@@ -9,7 +9,11 @@
     "build-storybook": "build-storybook",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "vue-cli-service storybook:build -c config/storybook",
-    "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook"
+    "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook",
+    "styles:build": "style-dictionary build --config ./style-dictionary.config.json"
+  },
+  "bin": {
+    "style-dictionary": "./node_modules/style-dictionary/bin/style-dictionary"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
