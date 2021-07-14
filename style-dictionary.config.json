@@ -6,7 +6,7 @@
       "buildPath": "src/styles/",
       "files": [{
         "destination": "_variables.scss",
-        "format": "css/variables",
+        "format": "scss/variables",
 	"options": {
 		"outputReferences": true
 	}

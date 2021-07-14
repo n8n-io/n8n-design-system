@@ -12,7 +12,7 @@
   </el-button>
 </template>
 
-<script >
+<script lang="ts">
 import Vue from "vue";
 import { Button } from "element-ui";
 import N8nIcon from '../Icon/Icon.vue';

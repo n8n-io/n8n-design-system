@@ -1,5 +1,5 @@
 import './font-awesome-icons';
-// import '../src/styles/global.css';
+import '../src/styles/globals.scss';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

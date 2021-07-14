@@ -9,29 +9,9 @@ module.exports = {
 		"@storybook/addon-links",
 		"@storybook/addon-essentials"
 	],
-	babel: async (options = {}) => ({
-		...options,
-		// any extra options you want to set
-		// presets: ["@vue/cli-plugin-babel/preset"],
-		plugins: [
-			...options.plugins,
-			[
-				"component",
-				{
-				"libraryName": "element-ui",
-				"styleLibraryName": "theme-chalk",
-				}
-			],
-		]
-	}),
 	webpackFinal: async (config, {
 		configType
 	}) => {
-		// `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
-		// You can change the configuration based on that.
-		// 'PRODUCTION' is used when building the static version of storybook.
-
-		// Make whatever fine-grained changes you need
 		config.module.rules.push({
 			test: /\.scss$/,
 			oneOf: [{
@@ -59,7 +39,6 @@ module.exports = {
 			]
 		});
 
-		// Return the altered config
 		return config;
 	},
 }
