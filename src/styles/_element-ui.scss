@@ -1,11 +1,7 @@
 @import './_variables';
 
-// $--color-primary: red;
-$--color-primary: teal;
-// $--font-path: '~element-ui/lib/theme-chalk/fonts';
+$--color-primary: $color-primary;
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
 
-// @import "~element-ui/packages/theme-chalk/src/index";
-
-
-@import "~element-ui/lib/theme-chalk/base.css";
-@import "~element-ui/lib/theme-chalk/button.css";
+@import "~element-ui/packages/theme-chalk/src/base.scss";
+@import "~element-ui/packages/theme-chalk/src/button.scss";
