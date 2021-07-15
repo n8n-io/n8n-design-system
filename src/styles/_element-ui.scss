@@ -1,7 +1,12 @@
 @import './_variables';
 
-$--color-primary: $color-primary;
+// $--color-primary: $color-primary;
 $--font-path: '~element-ui/lib/theme-chalk/fonts';
 
-@import "~element-ui/packages/theme-chalk/src/base.scss";
-@import "~element-ui/packages/theme-chalk/src/button.scss";
+// @import "~element-ui/packages/theme-chalk/src/base.scss";
+// @import "~element-ui/packages/theme-chalk/src/button.scss";
+
+@import "~element-theme-n8n/src/base.scss";
+@import "~element-theme-n8n/src/button.scss";
+
+// @import 'element-theme-n8n';
