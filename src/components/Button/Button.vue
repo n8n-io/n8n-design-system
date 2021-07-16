@@ -7,7 +7,7 @@
     :size="$options.mapToSize(props.size)"
     round
   >
-    <N8nIcon v-if="props.icon" :icon="props.icon" />
+    <N8nIcon v-if="props.icon && !props.loading" :icon="props.icon" />
     {{ props.label }}
   </el-button>
 </template>

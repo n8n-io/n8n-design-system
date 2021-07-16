@@ -31,7 +31,37 @@
 			}
 		},
 		"secondary": {
-			"value": "#634DFF"
+			"h": {
+				"value": "150"
+			},
+			"s": {
+				"value": "74%"
+			},
+			"l": {
+				"value": "40%"
+			}
+		},
+		"success": {
+			"h": {
+				"value": "150"
+			},
+			"s": {
+				"value": "74%"
+			},
+			"l": {
+				"value": "40%"
+			}
+		},
+		"danger": {
+			"h": {
+				"value": "0"
+			},
+			"s": {
+				"value": "88%"
+			},
+			"l": {
+				"value": "65%"
+			}
 		},
 		"font": {
 			"base"     : { "value": "{color.base.red.value}" },
