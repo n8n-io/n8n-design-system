@@ -2,11 +2,11 @@
   "source": ["src/styles/tokens/**/*.json"],
   "platforms": {
     "scss": {
-      "transformGroup": "scss",
+	"transforms": ["attribute/cti", "name/cti/kebab", "size/rem"],
       "buildPath": "src/styles/",
       "files": [{
         "destination": "_variables.scss",
-        "format": "scss/variables",
+        "format": "css/variables",
 	"options": {
 		"outputReferences": true
 	}

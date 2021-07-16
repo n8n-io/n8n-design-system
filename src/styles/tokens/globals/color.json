@@ -20,10 +20,23 @@
 			}
 		},
 		"primary": {
-			"value": "#FF6D5A"
+			"h": {
+				"value": "7"
+			},
+			"s": {
+				"value": "100%"
+			},
+			"l": {
+				"value": "68%"
+			}
 		},
 		"secondary": {
 			"value": "#634DFF"
+		},
+		"font": {
+			"base"     : { "value": "{color.base.red.value}" },
+			"secondary": { "value": "{color.base.green.value}" },
+			"tertiary" : { "value": "{color.base.gray.light.value}" }
 		}
 	}
 }

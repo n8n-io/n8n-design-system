@@ -1,18 +1,23 @@
+/**
+ * Do not edit directly
+ * Generated on Fri, 16 Jul 2021 13:24:03 GMT
+ */
 
-// Do not edit directly
-// Generated on Wed, 14 Jul 2021 14:26:11 GMT
-
-$size-font-large: 2rem; // the large size of the font
-$size-font-medium: 1rem; // the medium size of the font
-$size-font-small: 0.75rem; // the small size of the font
-$color-secondary: #634dff;
-$color-primary: #ff6d5a;
-$color-base-green: #030303;
-$color-base-red: #ff0000;
-$color-base-gray-dark: #111111;
-$color-base-gray-medium: #999999;
-$color-base-gray-light: #cccccc;
-$size-font-base: $size-font-medium; // the base size of the font
-$color-font-tertiary: $color-base-gray-light;
-$color-font-secondary: $color-base-green;
-$color-font-base: $color-base-red;
+:root {
+  --size-font-large: 2rem; /* the large size of the font */
+  --size-font-medium: 1rem; /* the medium size of the font */
+  --size-font-small: 0.75rem; /* the small size of the font */
+  --color-secondary: #634DFF;
+  --color-primary-l: 68%;
+  --color-primary-s: 100%;
+  --color-primary-h: 7;
+  --color-base-green: #00FF00;
+  --color-base-red: #FF0000;
+  --color-base-gray-dark: #111111;
+  --color-base-gray-medium: #999999;
+  --color-base-gray-light: #CCCCCC;
+  --size-font-base: var(--size-font-medium); /* the base size of the font */
+  --color-font-tertiary: var(--color-base-gray-light);
+  --color-font-secondary: var(--color-base-green);
+  --color-font-base: var(--color-base-red);
+}
