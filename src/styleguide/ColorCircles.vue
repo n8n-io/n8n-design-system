@@ -3,13 +3,15 @@
 	<div  v-for="color in colors" :key="color" :class="$style.container">
 		<div :class="$style.circle" :style="{backgroundColor: `var(${color})`}"></div>
 		<span>{{color}}</span>
-		<span :class="$style.color">{{getHSLValue(color)}}</span>
+		<span :class="$style.hsl">{{hsl[color]}}</span>
 		<span :class="$style.color">{{getHexValue(color)}}</span>
 	</div>
 </div>
 </template>
 
 <script lang="ts">
+import Vue from 'vue';
+
 function hslToHex(h: number, s: number, l: number) {
   l /= 100;
   const a = s * Math.min(l, 1 - l) / 100;
@@ -30,22 +32,45 @@ function getHex(hsl: string) {
 
 export default {
   name: "color-circles",
+  data() {
+	  return {
+		observer: null as null | MutationObserver,
+		hsl: {} as {[color: string]: string},
+	  };
+  },
   props: {
     colors: {
       type: Array,
       required: true,
     }
   },
+  created() {
+	const setColors = () => {
+		(this.colors as string[]).forEach((color: string) => {
+			const style = getComputedStyle(document.body)
+
+			Vue.set(this.hsl, color, style.getPropertyValue(color));
+		});
+	};
+
+	setColors();
+
+	// when theme class is added or removed, reset color values
+	this.observer = new MutationObserver((mutationsList) => {
+		for (const mutation of mutationsList) {
+			if (mutation.type === 'attributes') {
+				setColors();
+			}
+		}
+	});
+	const body = document.querySelector('body');
+	if (body) {
+		this.observer.observe(body, {attributes: true});
+	}
+  },
   methods: {
-	  getHSLValue(color: string) {
-		const style = getComputedStyle(document.body)
-
-		return style.getPropertyValue(color);
-	  },
 	  getHexValue(color: string) {
-		const hsl = this.getHSLValue(color);
-
-		return getHex(hsl);
+		return getHex(this.hsl[color]);
 	  },
   },
 };
@@ -68,6 +93,7 @@ export default {
 	text-align: center;
 	align-self: flex-start;
 	padding: 5px;
+	color: var(--color-text-base);
 }
 
 .circle {
@@ -80,6 +106,11 @@ export default {
 
 .color {
 	font-size: .8em;
+}
+
+.hsl {
+	composes: color;
+	content: var(--color-primary);
 }
 
 </style>

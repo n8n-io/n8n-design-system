@@ -8,7 +8,8 @@ module.exports = {
 	"addons": [
 		"@storybook/addon-links",
 		"@storybook/addon-essentials",
-		'storybook-addon-designs'
+		'storybook-addon-designs',
+		'storybook-addon-themes'
 	],
 	webpackFinal: async (config, {
 		configType
