@@ -3,8 +3,8 @@
 	<div  v-for="color in colors" :key="color" :class="$style.container">
 		<div :class="$style.circle" :style="{backgroundColor: `var(${color})`}"></div>
 		<span>{{color}}</span>
-		<span>{{getHSLValue(color)}}</span>
-		<span>{{getHexValue(color)}}</span>
+		<span :class="$style.color">{{getHSLValue(color)}}</span>
+		<span :class="$style.color">{{getHexValue(color)}}</span>
 	</div>
 </div>
 </template>
@@ -67,6 +67,7 @@ export default {
 	align-items: center;
 	text-align: center;
 	align-self: flex-start;
+	padding: 5px;
 }
 
 .circle {
@@ -76,4 +77,9 @@ export default {
 	margin-bottom: 5px;
 	border: 1px solid lightgray;
 }
+
+.color {
+	font-size: .8em;
+}
+
 </style>
