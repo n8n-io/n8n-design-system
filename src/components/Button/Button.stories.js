@@ -25,6 +25,12 @@ export default {
 			},
 		},
 	},
+	parameters: {
+		design: {
+			type: 'figma',
+			url: 'https://www.figma.com/file/DxLbnIyMK8X0uLkUguFV4n/n8n-design-system_v1?node-id=5%3A1147'
+		}
+	}
 };
 
 const Template = (args, {
@@ -34,7 +40,7 @@ const Template = (args, {
 	components: {
 		N8nButton
 	},
-	template: '<n8n-button v-bind="$props" />',
+	template: '<n8n-button v-bind="$props" />'
 });
 
 export const Button = Template.bind({});
