@@ -68,6 +68,11 @@ export default {
 		this.observer.observe(body, {attributes: true});
 	}
   },
+  destroyed() {
+	if (this.observer) {
+		this.observer.disconnect();
+	}
+  },
   methods: {
 	  getHexValue(color: string) {
 		return getHex(this.hsl[color]);
