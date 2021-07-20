@@ -50,4 +50,9 @@ export const parameters = {
 			}
 		],
 	},
+	options: {
+		storySort: {
+			order: ['Docs', 'Styleguide', 'Atoms']
+		}
+	}
 }

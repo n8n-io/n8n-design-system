@@ -1,0 +1,21 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import Sizes from './Sizes.vue';
+
+<Meta 
+	title="Styleguide/Font" 
+/>
+
+# Font
+
+## Font Sizes
+
+<Canvas>
+	<Story name="sizes">
+		{{
+		template: `<sizes :variables="['--font-size-2xs','--font-size-xs','--font-size-s','--font-size-m','--font-size-l','--font-size-xl','--font-size-2xl']" />`,
+		components: {
+			Sizes,
+		}
+		}}
+	</Story>
+</Canvas>
