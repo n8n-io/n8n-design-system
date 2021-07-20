@@ -5,6 +5,7 @@
     :disabled="props.disabled"
     :loading="props.loading"
     :size="$options.mapToSize(props.size)"
+    @click="listeners.click"
     round
   >
     <N8nIcon v-if="props.icon && !props.loading" :icon="props.icon" />

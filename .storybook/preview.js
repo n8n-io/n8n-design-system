@@ -1,6 +1,13 @@
 import './font-awesome-icons';
 import '../src/styles/globals.scss';
 
+import Vue from 'vue';
+
+// https://github.com/storybookjs/storybook/issues/6153
+Vue.prototype.toJSON = function () {
+	return this;
+};
+
 export const parameters = {
 	actions: {
 		argTypesRegex: "^on[A-Z].*"
