@@ -5,7 +5,7 @@
 			<th :class="$style.row">rem</th>
 			<th :class="$style.row">px</th>
 		</tr>
-		<tr  v-for="variable in variables" :key="variable">
+		<tr  v-for="variable in variables" :key="variable" :style="attr ? {[attr]: `var(${variable})`}: {}">
 			<td>{{variable}}</td>
 			<td>{{sizes[variable].rem}}</td>
 			<td>{{sizes[variable].px}}</td>
@@ -28,7 +28,10 @@ export default {
     variables: {
       type: Array,
       required: true,
-    }
+    },
+    attr: {
+	type: String
+    },
   },
   created() {
 	const setSizes = () => {

@@ -1,9 +1,8 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
-import Sizes from './Sizes.vue';
 import TextClasses from './TextClasses.vue';
 
 <Meta 
-	title="Styleguide/Spacing" 
+	title="Styleguide/Text" 
 	parameters={{
 		design: {
 			type: 'figma',
@@ -12,14 +11,14 @@ import TextClasses from './TextClasses.vue';
 	}}
 />
 
-# Spacing
+# Classes 
 
 <Canvas>
-	<Story name="spacing">
+	<Story name="classes">
 		{{
-		template: `<sizes :variables="['--spacing-3xs','--spacing-2xs','--spacing-xs','--spacing-s','--spacing-m','--spacing-l','--spacing-xl','--spacing-2xl','--spacing-3xl','--spacing-4xl']" />`,
+		template: `<text-classes />`,
 		components: {
-			Sizes,
+			TextClasses,
 		}
 		}}
 	</Story>
