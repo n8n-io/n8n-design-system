@@ -1,5 +1,6 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
 import Sizes from './Sizes.vue';
+import VariableTable from './VariableTable.vue'
 
 <Meta 
 	title="Styleguide/Font" 
@@ -10,11 +11,24 @@ import Sizes from './Sizes.vue';
 ## Font Sizes
 
 <Canvas>
-	<Story name="sizes">
+	<Story name="font-size">
 		{{
 		template: `<sizes :variables="['--font-size-2xs','--font-size-xs','--font-size-s','--font-size-m','--font-size-l','--font-size-xl','--font-size-2xl']" />`,
 		components: {
 			Sizes,
+		}
+		}}
+	</Story>
+</Canvas>
+
+## Line Heights
+
+<Canvas>
+	<Story name="line-height">
+		{{
+		template: `<variable-table :variables="['--font-line-height-compact','--font-line-height-regular','--font-line-height-loose','--font-line-height-xloose']" />`,
+		components: {
+			VariableTable,
 		}
 		}}
 	</Story>
