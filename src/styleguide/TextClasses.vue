@@ -20,43 +20,7 @@ export default {
 </script>
 
 <style lang="scss" module>
-// todo move to some import
-
-.heading1 {
-	font-size: var(--font-size-2xl);
-	line-height: var(--font-line-height-compact);
-}
-
-.heading2 {
-	font-size: var(--font-size-xl);
-	line-height: var(--font-line-height-loose);
-}
-
-.heading3 {
-	font-size: var(--font-size-m);
-	line-height: var(--font-line-height-loose);
-}
-
-.heading4 {
-	font-size: var(--font-size-s);
-	line-height: var(--font-line-height-regular);
-}
-
-.body-large {
-	font-size: var(--font-size-m);
-	line-height: var(--font-line-height-xloose);
-}
-
-.body-medium {
-	font-size: var(--font-size-s);
-	line-height: var(--font-line-height-loose);
-}
-
-.body-small {
-	font-size: var(--font-size-2xs);
-	line-height: var(--font-line-height-loose);
-}
-
+@use "~element-theme-n8n/src/common/typography.scss";
 
 .table {
 	text-align: center;
