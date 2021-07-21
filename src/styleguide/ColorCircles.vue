@@ -25,7 +25,7 @@ function hslToHex(h: number, s: number, l: number) {
 
 function getHex(hsl: string) {
 	const colors = hsl.replace('hsl(', '').replace(')', '').replace(/%/g, '').split(',')
-		.map((n: string) => parseInt(n));
+		.map((n: string) => parseFloat(n));
 
 	return hslToHex(colors[0], colors[1], colors[2]);
 }
@@ -98,7 +98,7 @@ export default {
 	text-align: center;
 	align-self: flex-start;
 	padding: 5px;
-	color: var(--color-text-base);
+	color: var(--color-text-dark);
 }
 
 .circle {
