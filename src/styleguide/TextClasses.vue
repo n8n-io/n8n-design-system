@@ -8,6 +8,7 @@
 </template>
 
 <script lang="ts">
+
 export default {
   name: "text-classes",
   data() {

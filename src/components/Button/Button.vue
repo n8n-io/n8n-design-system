@@ -63,3 +63,7 @@ export default {
   mapToSize: (size) => sizeMap[size],
 };
 </script>
+
+<style lang="scss">
+@use "~element-theme-n8n/src/button.scss"; 
+</style>

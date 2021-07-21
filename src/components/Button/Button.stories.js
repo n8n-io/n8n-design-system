@@ -64,7 +64,8 @@ const ManyTemplate = (args, {
 	components: {
 		N8nButton
 	},
-	template: '<div> <n8n-button v-bind="$props" size="large" />  <n8n-button v-bind="$props" size="medium" />  <n8n-button v-bind="$props" size="small" />  <n8n-button v-bind="$props" :loading="true" />  <n8n-button v-bind="$props" :disabled="true" /></div>',
+	template: '<div> <n8n-button v-bind="$props" size="large" @click="onClick" />  <n8n-button v-bind="$props" size="medium" @click="onClick" />  <n8n-button v-bind="$props" size="small" @click="onClick" />  <n8n-button v-bind="$props" :loading="true" @click="onClick" />  <n8n-button v-bind="$props" :disabled="true" @click="onClick" /></div>',
+	methods,
 });
 
 export const Primary = ManyTemplate.bind({});
