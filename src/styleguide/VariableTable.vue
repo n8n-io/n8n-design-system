@@ -4,7 +4,7 @@
 			<th :class="$style.row">Name</th>
 			<th :class="$style.row">Value</th>
 		</tr>
-		<tr  v-for="variable in variables" :key="variable">
+		<tr  v-for="variable in variables" :key="variable" :style="attr ? {[attr]: `var(${variable})`}: {}">
 			<td>{{variable}}</td>
 			<td>{{values[variable]}}</td>
 		</tr>
@@ -26,6 +26,9 @@ export default {
     variables: {
       type: Array,
       required: true,
+    },
+    attr: {
+	type: String
     }
   },
   created() {
