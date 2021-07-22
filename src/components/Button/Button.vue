@@ -16,7 +16,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { Button } from "element-ui";
-import N8nIcon from '../Icon/Icon.vue';
+import N8nIcon from "../Icon/Icon.vue";
 
 Vue.component("ElButton", Button);
 Vue.component("N8nIcon", N8nIcon);
@@ -36,16 +36,16 @@ export default {
     },
     type: {
       type: String,
-      default: 'primary',
+      default: "primary",
       validator: function (value) {
-        return ['primary', 'secondary'].indexOf(value) !== -1;
+        return ["primary", "secondary"].indexOf(value) !== -1;
       },
     },
     size: {
       type: String,
-      default: 'medium',
+      default: "medium",
       validator: function (value) {
-        return ['small', 'medium', 'large'].indexOf(value) !== -1;
+        return ["small", "medium", "large"].indexOf(value) !== -1;
       },
     },
     loading: {
@@ -65,5 +65,5 @@ export default {
 </script>
 
 <style lang="scss">
-@use "~/theme/src/button.scss"; 
+@use "~/theme/src/button.scss";
 </style>

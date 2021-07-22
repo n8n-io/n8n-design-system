@@ -1,36 +1,34 @@
-import N8nIcon from './Icon.vue';
+import N8nIcon from "./Icon.vue";
 
 export default {
-	title: 'Atoms/Icon',
-	component: N8nIcon,
-	argTypes: {
-		icon: {
-			control: 'text',
-		}
-	},
+  title: "Atoms/Icon",
+  component: N8nIcon,
+  argTypes: {
+    icon: {
+      control: "text",
+    },
+  },
 };
 
-const Template = (args, {
-	argTypes
-}) => ({
-	props: Object.keys(argTypes),
-	components: {
-		N8nIcon
-	},
-	template: '<n8n-icon v-bind="$props" />',
+const Template = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: {
+    N8nIcon,
+  },
+  template: '<n8n-icon v-bind="$props" />',
 });
 
 export const Clock = Template.bind({});
 Clock.args = {
-	icon: 'clock',
+  icon: "clock",
 };
 
 export const Plus = Template.bind({});
 Plus.args = {
-	icon: 'plus',
+  icon: "plus",
 };
 
 export const Stop = Template.bind({});
 Stop.args = {
-	icon: 'stop',
+  icon: "stop",
 };
