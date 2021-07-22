@@ -1,6 +1,0 @@
-@use "~/theme/src/_tokens.scss";
-@use "~/theme/src/_tokens.dark.scss" as dark;
-@use "~/theme/src/base.scss" with (
-	$font-path: '~element-ui/lib/theme-chalk/fonts',
-);
-

@@ -1,33 +1,39 @@
 {
 	"spacing": {
-		"3xs": {
+		"4xs": {
 			"value": 0.125
 		},
-		"2xs": {
+		"3xs": {
 			"value": 0.25
 		},
-		"xs": {
+		"2xs": {
 			"value": 0.5
+		},
+		"xs": {
+			"value": 0.75
 		},
 		"s": {
 			"value": 1
 		},
 		"m": {
-			"value": 1.5
+			"value": 1.25
 		},
 		"l": {
-			"value": 2
+			"value": 1.5
 		},
 		"xl": {
-			"value": 3
+			"value": 2
 		},
 		"2xl": {
-			"value": 4
+			"value": 3
 		},
 		"3xl": {
-			"value": 8
+			"value": 4
 		},
 		"4xl": {
+			"value": 8
+		},
+		"5xl": {
 			"value": 16
 		}
 	}

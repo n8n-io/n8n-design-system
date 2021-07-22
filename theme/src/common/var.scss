@@ -140,11 +140,9 @@ $font-size-small: var(--font-size-xs) !default;
 /// fontSize|1|Font Size|0
 $font-size-extra-small: var(--font-size-2xs) !default;
 /// fontWeight|1|Font Weight|1
-$font-weight-primary: 500 !default;
+$font-weight-primary: var(--font-weight-bold) !default;
 /// fontLineHeight|1|Line Height|2
 $font-line-height-primary: 24px !default;
-/// fontLineHeight|1|Line Height|2
-$font-line-height-secondary: 16px !default;
 $font-color-disabled-base: #bbb !default;
 
 /* z-index

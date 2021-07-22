@@ -153,7 +153,7 @@
   }
   @include mixins.when(round) {
     border-radius: 20px;
-    padding: 12px 23px;
+    padding: var(--spacing-xs) var(--spacing-s);
   }
   @include mixins.when(circle) {
     border-radius: 50%;

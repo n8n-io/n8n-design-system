@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 22 Jul 2021 13:26:27 GMT
+ * Generated on Thu, 22 Jul 2021 14:30:23 GMT
  */
 
 @mixin theme {
@@ -114,16 +114,18 @@
   --font-weight-regular: 400;
   --font-weight-bold: 600;
   --font-family: 'Open Sans',sans-serif;
-  --spacing-3xs: 0.125rem;
-  --spacing-2xs: 0.25rem;
-  --spacing-xs: 0.5rem;
+  --spacing-4xs: 0.125rem;
+  --spacing-3xs: 0.25rem;
+  --spacing-2xs: 0.5rem;
+  --spacing-xs: 0.75rem;
   --spacing-s: 1rem;
-  --spacing-m: 1.5rem;
-  --spacing-l: 2rem;
-  --spacing-xl: 3rem;
-  --spacing-2xl: 4rem;
-  --spacing-3xl: 8rem;
-  --spacing-4xl: 16rem;
+  --spacing-m: 1.25rem;
+  --spacing-l: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  --spacing-4xl: 8rem;
+  --spacing-5xl: 16rem;
 }
 
 :root { @include theme }
