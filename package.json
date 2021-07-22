@@ -3,21 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint",
     "build-storybook": "build-storybook",
     "storybook": "start-storybook -p 6006",
-    "storybook:build": "vue-cli-service storybook:build -c config/storybook",
-    "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook",
-    "build:tokens": "gulp build:tokens"
+    "build:tokens": "gulp build:tokens",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/vue-fontawesome": "^2.0.2",
     "core-js": "^3.6.5",
-    "element-theme-n8n": "file:../element-theme-n8n",
+    "element-theme-n8n": "git+ssh://git@github.com/n8n-io/element-theme-n8n.git",
     "element-ui": "^2.15.3",
     "storybook-addon-themes": "^6.1.0",
     "vue": "^2.6.11",
