@@ -1,0 +1,88 @@
+{
+	"color": {
+		"primary": {
+			"value": "hsl(7,100%,68%)",
+			"tint": {
+				"1": 82,
+				"2": 91,
+				"3": 97
+			},
+			"shade": {
+				"1": 11
+			}
+		},
+		"secondary": {
+			"value": "hsl(247, 100%, 65%)"
+		},
+		"success": {
+			"value": "hsl(150,74%,40%)",
+			"tint": {
+				"1": 88,
+				"2": 97
+			}
+		},
+		"warning": {
+			"value": "hsl(36,77%,57%)",
+			"tint": {
+				"1": 88,
+				"2": 96
+			}
+		},
+		"danger": {
+			"value": "hsl(0,88%,65%)",
+			"tint": {
+				"1": 92,
+				"2": 97
+			}
+		},
+		"info": {
+			"value": "hsl(220,4%,58%)",
+			"tint": {
+				"1": 88,
+				"2": 96
+			}
+		},
+		"text": {
+			"dark": {
+				"value": "hsl(0, 0%, 33.5%)"
+			},
+			"base": {
+				"value": "hsl(240, 4%, 51%)"
+			},
+			"light": {
+				"value": "{color.info.value}"
+			},
+			"lighter": {
+				"value": "hsl(222, 17%, 88%)"
+			},
+			"xlight": {
+				"value": "{color.base.white.value}"
+			}
+		},
+		"foreground": {
+			"base": {
+				"value": "hsl(220, 20%, 88%)"
+			},
+			"light": {
+				"value": "hsl(0, 0%, 93%)"
+			}
+		},
+		"background": {
+			"dark": {
+				"value": "hsl(240, 4%, 19%)"
+			},
+			"base": {
+				"value": "hsl(220, 30%, 96%)"
+			},
+			"light": {
+				"value": "hsl(220, 27%, 98%)"
+			},
+			"lighter": {
+				"value": "hsl(252, 71%, 99%)"
+			},
+			"xlight": {
+				"value": "{color.base.white.value}"
+			}
+		}
+	}
+}

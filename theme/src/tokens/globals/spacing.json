@@ -1,0 +1,34 @@
+{
+	"spacing": {
+		"3xs": {
+			"value": 0.125
+		},
+		"2xs": {
+			"value": 0.25
+		},
+		"xs": {
+			"value": 0.5
+		},
+		"s": {
+			"value": 1
+		},
+		"m": {
+			"value": 1.5
+		},
+		"l": {
+			"value": 2
+		},
+		"xl": {
+			"value": 3
+		},
+		"2xl": {
+			"value": 4
+		},
+		"3xl": {
+			"value": 8
+		},
+		"4xl": {
+			"value": 16
+		}
+	}
+}

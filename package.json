@@ -7,7 +7,9 @@
     "storybook": "start-storybook -p 6006",
     "build:tokens": "gulp build:tokens",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build:theme": "gulp build:theme",
+    "watch:theme": "gulp watch:theme"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
@@ -52,6 +54,9 @@
     "style-dictionary": "^3.0.1",
     "typescript": "~4.1.5",
     "vue-loader": "^15.9.7",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-dart-sass": "^1.0.2"
   }
 }
