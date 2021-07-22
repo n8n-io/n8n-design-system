@@ -3,13 +3,17 @@
     type="primary"
     :plain="props.type === 'secondary'"
     :disabled="props.disabled"
-    :loading="props.loading"
     :size="$options.mapToSize(props.size)"
     @click="listeners.click"
+    :loading="props.loading"
+    :class="$style.button"
     round
   >
-    <N8nIcon v-if="props.icon && !props.loading" :icon="props.icon" />
-    {{ props.label }}
+    <span  :class="$style.icon" v-if="props.loading || props.icon">
+	<N8nSpinner v-if="props.loading" />
+	<N8nIcon v-else-if="props.icon" :icon="props.icon"/>
+    </span>
+    <span>{{ props.label }}</span>
   </el-button>
 </template>
 
@@ -17,9 +21,11 @@
 import Vue from "vue";
 import { Button } from "element-ui";
 import N8nIcon from "../N8nIcon";
+import N8nSpinner from "../N8nSpinner";
 
 Vue.component("ElButton", Button);
 Vue.component("N8nIcon", N8nIcon);
+Vue.component("N8nSpinner", N8nSpinner);
 
 const sizeMap = {
   small: "small",
@@ -66,4 +72,28 @@ export default {
 
 <style lang="scss">
 @use "~/theme/src/button.scss";
+</style>
+
+
+<style lang="scss" module>
+.button {
+	> i {
+		display: none;
+	}
+
+	> span {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+.icon {
+	margin-right: var(--spacing-3xs);
+	font-size: 85%;
+	display: inline-flex;
+
+	svg {
+		display: block;
+	}
+}
 </style>

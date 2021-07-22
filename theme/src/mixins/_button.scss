@@ -3,20 +3,12 @@
 
 @mixin button-plain($color, $h, $s, $l) {
   color: hsl(var(#{$h}), var(#{$s}), var(#{$l}));
-  background: var.$color-white;
+  background: unset;
   border-color: function.lightness($h, $s, $l, var.$button-hover-tint-percent);
 
-  &:hover,
-  &:focus {
-    background: hsl(var(#{$h}), var(#{$s}), var(#{$l}));
-    border-color: hsl(var(#{$h}), var(#{$s}), var(#{$l}));
-    color: var.$color-white;
-  }
-
   &:active {
-    background: function.saturation($h, $s, $l, -(var.$button-active-shade-percent));
-    border-color: function.saturation($h, $s, $l, -(var.$button-active-shade-percent));
-    color: var.$color-white;
+    border-color: function.lightness($h, $s, $l, -(var.$button-active-shade-percent));
+    color: function.lightness($h, $s, $l, -(var.$button-active-shade-percent));
     outline: none;
   }
 
@@ -25,9 +17,9 @@
     &:hover,
     &:focus,
     &:active {
-      color: function.lightness($h, $s, $l, 20%);
-      background-color: var.$color-white;
-      border-color: function.lightness($h, $s, $l, 24%);
+      color: var(--color-text-light);;
+      background-color: unset;
+      border-color: var(--color-foreground-base);
     }
   }
 }
@@ -37,23 +29,16 @@
   background-color: hsl(var(#{$h}), var(#{$s}), var(#{$l}));
   border-color: hsl(var(#{$h}), var(#{$s}), var(#{$l}));
 
-  &:hover,
-  &:focus {
-    background: function.lightness($h, $s, $l, var.$button-hover-tint-percent);
-    border-color: function.lightness($h, $s, $l, var.$button-hover-tint-percent);
-    color: $color;
-  }
-  
   &:active {
-    background: function.saturation($h, $s, $l, -(var.$button-active-shade-percent));
-    border-color: function.saturation($h, $s, $l, -(var.$button-active-shade-percent));
+    background: function.lightness($h, $s, $l, -(var.$button-active-shade-percent));
+    border-color: function.lightness($h, $s, $l, -(var.$button-active-shade-percent));
     color: $color;
     outline: none;
   }
 
   &.is-active {
-    background: function.saturation($h, $s, $l, -(var.$button-active-shade-percent));
-    border-color: function.saturation($h, $s, $l, -(var.$button-active-shade-percent));
+    background: function.lightness($h, $s, $l, -(var.$button-active-shade-percent));
+    border-color: function.lightness($h, $s, $l, -(var.$button-active-shade-percent));
     color: $color;
   }
 
@@ -62,9 +47,9 @@
     &:hover,
     &:focus,
     &:active {
-      color: var.$color-white;
-      background-color: function.lightness($h, $s, $l, 20%);
-      border-color: function.lightness($h, $s, $l, 20%);
+      color: var(--color-text-light);
+      background-color: var(--color-foreground-base);
+      border-color: var(--color-foreground-base);
     }
   }
 

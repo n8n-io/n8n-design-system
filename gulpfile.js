@@ -43,7 +43,7 @@ function compileTheme() {
 
 function compileThemeTokens(done) {
   StyleDictionary.build({
-    source: ["theme/src/tokens/base/*.json", "theme/src/tokens/globals/*.json"],
+    source: ["theme/src/tokens/base/*.json", "theme/src/tokens/globals/*.json", "theme/src/tokens/components/*.json"],
     themeSource: [
       "theme/src/tokens/base/*.json",
       `theme/src/tokens/themes/:theme/*.json`,

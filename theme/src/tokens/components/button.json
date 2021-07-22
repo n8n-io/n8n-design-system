@@ -1,0 +1,17 @@
+{
+	"button": {
+		"radius": {
+			"round": {
+				"value": "20px"
+			},
+			"circle": {
+				"value": "50%"
+			}
+		},
+		"shade": {
+			"active": {
+				"value": "10%"
+			}
+		}
+	}
+}

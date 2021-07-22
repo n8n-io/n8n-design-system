@@ -1,4 +1,5 @@
 @use './tokens';
+@use "~/theme/src/common/reset.scss";
 @use "~/theme/src/_tokens.scss" as default-theme;
 @use "~/theme/src/_tokens.dark.scss" as dark-theme;
 

@@ -20,7 +20,7 @@
   outline: none;
   margin: 0;
   transition: 0.1s;
-  font-weight: var.$button-font-weight;
+  font-weight: var(--font-weight-semi-bold);
   @include utils.utils-user-select(none);
   & + & {
     margin-left: 10px;
@@ -32,15 +32,6 @@
     var.$button-font-size,
     var.$button-border-radius
   );
-
-  /**
-  &:hover,
-  &:focus {
-    color: var.$color-primary;
-    border-color: var.$color-primary-light-7;
-    background-color: var.$color-primary-light-9;
-  }
-  **/
 
   &:active {
     color: function.saturation(
@@ -62,76 +53,16 @@
     border: 0;
   }
 
-  & [class*='el-icon-'] {
-    & + span {
-      margin-left: 5px;
-    }
-  }
-
-  @include mixins.when(plain) {
-    &:hover,
-    &:focus {
-      background: var.$color-white;
-      border-color: var.$color-primary;
-      color: var.$color-primary;
-    }
-
-    &:active {
-      background: var.$color-white;
-      border-color: function.saturation(
-        --color-primary-h,
-        --color-primary-s,
-        --color-primary-l,
-        -(var.$button-active-shade-percent)
-      );
-      color: function.saturation(
-        --color-primary-h,
-        --color-primary-s,
-        --color-primary-l,
-        -(var.$button-active-shade-percent)
-      );
-      outline: none;
-    }
-  }
-
-  @include mixins.when(active) {
-    color: function.saturation(
-      --color-primary-h,
-      --color-primary-s,
-      --color-primary-l,
-      -(var.$button-active-shade-percent)
-    );
-    border-color: function.saturation(
-      --color-primary-h,
-      --color-primary-s,
-      --color-primary-l,
-      -(var.$button-active-shade-percent)
-    );
-  }
-
   @include mixins.when(disabled) {
     &,
     &:hover,
     &:focus {
-      color: var.$button-disabled-font-color;
       cursor: not-allowed;
       background-image: none;
-      background-color: var.$button-disabled-background-color;
-      border-color: var.$button-disabled-border-color;
     }
 
     &.el-button--text {
       background-color: transparent;
-    }
-
-    &.is-plain {
-      &,
-      &:hover,
-      &:focus {
-        background-color: var.$color-white;
-        border-color: var.$button-disabled-border-color;
-        color: var.$button-disabled-font-color;
-      }
     }
   }
 
@@ -152,11 +83,11 @@
     }
   }
   @include mixins.when(round) {
-    border-radius: 20px;
-    padding: var(--spacing-xs) var(--spacing-s);
+    border-radius: var(--button-radius-round);
+    padding: var(--spacing-xs) var(--spacing-m);
   }
   @include mixins.when(circle) {
-    border-radius: 50%;
+    border-radius: var(--button-radius-circle);
     padding: var.$button-padding-vertical;
   }
   @include mixins.m(primary) {
@@ -211,9 +142,9 @@
   }
   @include mixins.m(medium) {
     @include button.button-size(
-      var.$button-medium-padding-vertical,
-      var.$button-medium-padding-horizontal,
-      var.$button-medium-font-size,
+	var(--spacing-2xs),
+	var(--spacing-xs),
+      	var(--font-size-2xs),
       var.$button-medium-border-radius
     );
     @include mixins.when(circle) {
@@ -222,9 +153,9 @@
   }
   @include mixins.m(small) {
     @include button.button-size(
-      var.$button-small-padding-vertical,
-      var.$button-small-padding-horizontal,
-      var.$button-small-font-size,
+      var(--spacing-3xs),
+      var(--spacing-xs),
+      var(--font-size-2xs),
       var.$button-small-border-radius
     );
     @include mixins.when(circle) {

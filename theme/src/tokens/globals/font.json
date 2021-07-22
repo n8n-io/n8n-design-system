@@ -41,6 +41,9 @@
 			"regular": {
 				"value": 400
 			},
+			"semi-bold": {
+				"value": 500
+			},
 			"bold": {
 				"value": 600
 			}
