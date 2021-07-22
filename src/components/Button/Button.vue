@@ -16,7 +16,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { Button } from "element-ui";
-import N8nIcon from "../Icon/Icon.vue";
+import N8nIcon from "../Icon";
 
 Vue.component("ElButton", Button);
 Vue.component("N8nIcon", N8nIcon);
