@@ -65,5 +65,5 @@ export default {
 </script>
 
 <style lang="scss">
-@use "~element-theme-n8n/src/button.scss"; 
+@use "~/theme/src/button.scss"; 
 </style>

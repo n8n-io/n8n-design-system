@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style lang="scss" module>
-@use "~element-theme-n8n/src/common/typography.scss";
+@use "~/theme/src/common/typography.scss";
 
 .table {
 	text-align: center;
