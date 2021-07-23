@@ -10,10 +10,7 @@
   line-height: 1;
   white-space: nowrap;
   cursor: pointer;
-  background: var.$button-default-background-color;
   border: var.$border-base;
-  border-color: var.$button-default-border-color;
-  color: var.$button-default-font-color;
   -webkit-appearance: none;
   text-align: center;
   box-sizing: border-box;
@@ -22,15 +19,12 @@
   transition: 0.1s;
   font-weight: var(--font-weight-semi-bold);
   @include utils.utils-user-select(none);
-  & + & {
-    margin-left: 10px;
-  }
 
   @include button.button-size(
-    var.$button-padding-vertical,
-    var.$button-padding-horizontal,
-    var.$button-font-size,
-    var.$button-border-radius
+    var(--spacing-xs),
+    var(--spacing-m),
+    var(--font-size-s),
+    var(--border-radius-base)
   );
 
   &:active {
@@ -84,7 +78,6 @@
   }
   @include mixins.when(round) {
     border-radius: var(--button-radius-round);
-    padding: var(--spacing-xs) var(--spacing-m);
   }
   @include mixins.when(circle) {
     border-radius: var(--button-radius-circle);
@@ -182,15 +175,10 @@
 
     &:hover,
     &:focus {
-      color: function.lightness(
-        --color-primary-h,
-        --color-primary-s,
-        --color-primary-l,
-        var.$button-hover-tint-percent
-      );
       border-color: transparent;
       background-color: transparent;
     }
+
     &:active {
       color: function.saturation(
         --color-primary-h,
