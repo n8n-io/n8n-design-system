@@ -11,6 +11,8 @@
   white-space: nowrap;
   cursor: pointer;
   border: var(--border-base);
+  background: var.$button-default-background-color;
+
   -webkit-appearance: none;
   text-align: center;
   box-sizing: border-box;
