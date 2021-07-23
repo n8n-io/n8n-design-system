@@ -16,11 +16,7 @@ $color-transition-base: color .2s cubic-bezier(.645,.045,.355,1) !default;
 
 /* Color
 -------------------------- */
-/// color|1|Brand Color|0
-$color-primary: var(--color-primary) !default;
-/// color|1|Background Color|4
 $color-white: #FFFFFF !default;
-/// color|1|Background Color|4
 $color-black: #000000 !default;
 
 $color-primary-light-1: function.lightness(--color-primary-h, --color-primary-s, --color-primary-l, 4%) !default;
@@ -35,31 +31,20 @@ $color-primary-light-9: function.lightness(--color-primary-h, --color-primary-s,
 $color-primary-light: function.lightness(--color-primary-h, --color-primary-s, --color-primary-l, 30%) !default;
 $color-primary-lighter: function.lightness(--color-primary-h, --color-primary-s, --color-primary-l, 34%) !default;
 
-/// color|1|Functional Color|1
-$color-success: var(--color-success) !default;
-
 $color-success-light-1: function.lightness(--color-success-h, --color-success-s, --color-success-l, 4%) !default;
 $color-success-light-3: function.lightness(--color-success-h, --color-success-s, --color-success-l, 12%) !default;
 $color-success-light-5: function.lightness(--color-success-h, --color-success-s, --color-success-l, 20%) !default;
 $color-success-light: function.lightness(--color-success-h, --color-success-s, --color-success-l, 41%) !default;
-
-/// color|1|Functional Color|1
-$color-warning: var(--color-warning) !default;
 
 $color-warning-light-1: function.lightness(--color-warning-h, --color-warning-s, --color-warning-l, 4%) !default;
 $color-warning-light-3: function.lightness(--color-warning-h, --color-warning-s, --color-warning-l, 12%) !default;
 $color-warning-light-5: function.lightness(--color-warning-h, --color-warning-s, --color-warning-l, 20%) !default;
 $color-warning-light: function.lightness(--color-warning-h, --color-warning-s, --color-warning-l, 34%) !default;
 
-/// color|1|Functional Color|1
-$color-danger: var(--color-danger) !default;
-
 $color-danger-light-1: function.lightness(--color-danger-h, --color-danger-s, --color-danger-l, 4%) !default;
 $color-danger-light-3: function.lightness(--color-danger-h, --color-danger-s, --color-danger-l, 12%) !default;
 $color-danger-light-5: function.lightness(--color-danger-h, --color-danger-s, --color-danger-l, 20%) !default;
 $color-danger-light: function.lightness(--color-danger-h, --color-danger-s, --color-danger-l, 24%) !default;
-/// color|1|Functional Color|1
-$color-info: var(--color-info) !default;
 
 $color-info-light-1: function.lightness(--color-info-h, --color-info-s, --color-info-l, 4%) !default;
 $color-info-light-3: function.lightness(--color-info-h, --color-info-s, --color-info-l, 12%) !default;
@@ -94,7 +79,7 @@ $background-color-base: var(--color-background-base) !default;
 /* Link
 -------------------------- */
 $link-color: $color-primary-light-2 !default;
-$link-hover-color: $color-primary !default;
+$link-hover-color: var(--color-primary) !default;
 
 /* Border
 -------------------------- */
@@ -159,7 +144,7 @@ $disabled-border-base: $border-color-light !default;
 /* Icon
 -------------------------- */
 $icon-color: #666 !default;
-$icon-color-base: $color-info !default;
+$icon-color-base: var(--color-info) !default;
 
 /* Checkbox
 -------------------------- */
@@ -187,13 +172,13 @@ $checkbox-disabled-checked-input-border-color: $border-color-base !default;
 $checkbox-disabled-checked-icon-color: $color-text-placeholder !default;
 
 /// color||Color|0
-$checkbox-checked-font-color: $color-primary !default;
-$checkbox-checked-input-border-color: $color-primary !default;
+$checkbox-checked-font-color: var(--color-primary) !default;
+$checkbox-checked-input-border-color: var(--color-primary) !default;
 /// color||Color|0
-$checkbox-checked-background-color: $color-primary !default;
+$checkbox-checked-background-color: var(--color-primary) !default;
 $checkbox-checked-icon-color: $fill-base !default;
 
-$checkbox-input-border-color-hover: $color-primary !default;
+$checkbox-input-border-color-hover: var(--color-primary) !default;
 /// height||Other|4
 $checkbox-bordered-height: 40px !default;
 /// padding||Spacing|3
@@ -218,13 +203,11 @@ $checkbox-bordered-mini-input-width: 12px !default;
 $checkbox-bordered-mini-height: 28px !default;
 
 /// color||Color|0
-$checkbox-button-checked-background-color: $color-primary !default;
+$checkbox-button-checked-background-color: var(--color-primary) !default;
 /// color||Color|0
 $checkbox-button-checked-font-color: $color-white !default;
 /// color||Color|0
-$checkbox-button-checked-border-color: $color-primary !default;
-
-
+$checkbox-button-checked-border-color: var(--color-primary) !default;
 
 /* Radio
 -------------------------- */
@@ -255,15 +238,15 @@ $radio-disabled-checked-input-fill: $disabled-fill-base !default;
 $radio-disabled-checked-icon-color: $color-text-placeholder !default;
 
 /// color||Color|0
-$radio-checked-font-color: $color-primary !default;
+$radio-checked-font-color: var(--color-primary) !default;
 /// color||Color|0
-$radio-checked-input-border-color: $color-primary !default;
+$radio-checked-input-border-color: var(--color-primary) !default;
 /// color||Color|0
 $radio-checked-input-background-color: $color-white !default;
 /// color||Color|0
-$radio-checked-icon-color: $color-primary !default;
+$radio-checked-icon-color: var(--color-primary) !default;
 
-$radio-input-border-color-hover: $color-primary !default;
+$radio-input-border-color-hover: var(--color-primary) !default;
 
 $radio-bordered-height: 40px !default;
 $radio-bordered-padding: 12px 20px 0 10px !default;
@@ -283,11 +266,11 @@ $radio-bordered-mini-height: 28px !default;
 /// fontSize||Font|1
 $radio-button-font-size: $font-size-base !default;
 /// color||Color|0
-$radio-button-checked-background-color: $color-primary !default;
+$radio-button-checked-background-color: var(--color-primary) !default;
 /// color||Color|0
 $radio-button-checked-font-color: $color-white !default;
 /// color||Color|0
-$radio-button-checked-border-color: $color-primary !default;
+$radio-button-checked-border-color: var(--color-primary) !default;
 $radio-button-disabled-checked-fill: $border-color-xlight !default;
 
 /* Select
@@ -301,7 +284,7 @@ $select-close-hover-color: $color-text-secondary !default;
 $select-input-color: $color-text-placeholder !default;
 $select-multiple-input-color: #666 !default;
 /// color||Color|0
-$select-input-focus-border-color: $color-primary !default;
+$select-input-focus-border-color: var(--color-primary) !default;
 /// fontSize||Font|1
 $select-input-font-size: 14px !default;
 
@@ -312,10 +295,10 @@ $select-option-disabled-background: $color-white !default;
 $select-option-height: 34px !default;
 $select-option-hover-background: $background-color-base !default;
 /// color||Color|0
-$select-option-selected-font-color: $color-primary !default;
+$select-option-selected-font-color: var(--color-primary) !default;
 $select-option-selected-hover: $background-color-base !default;
 
-$select-group-color: $color-info !default;
+$select-group-color: var(--color-info) !default;
 $select-group-height: 30px !default;
 $select-group-font-size: 12px !default;
 
@@ -368,13 +351,13 @@ $messagebox-content-color: $color-text-regular !default;
 $messagebox-error-font-size: 12px !default;
 $msgbox-padding-primary: 15px !default;
 /// color||Color|0
-$messagebox-success-color: $color-success !default;
+$messagebox-success-color: var(--color-success) !default;
 /// color||Color|0
-$messagebox-info-color: $color-info !default;
+$messagebox-info-color: var(--color-info) !default;
 /// color||Color|0
-$messagebox-warning-color: $color-warning !default;
+$messagebox-warning-color: var(--color-warning) !default;
 /// color||Color|0
-$messagebox-danger-color: $color-danger !default;
+$messagebox-danger-color: var(--color-danger) !default;
 
 /* Message
 -------------------------- */
@@ -390,13 +373,13 @@ $message-close-size: 16px !default;
 $message-close-hover-color: $color-text-secondary !default;
 
 /// color||Color|0
-$message-success-font-color: $color-success !default;
+$message-success-font-color: var(--color-success) !default;
 /// color||Color|0
-$message-info-font-color: $color-info !default;
+$message-info-font-color: var(--color-info) !default;
 /// color||Color|0
-$message-warning-font-color: $color-warning !default;
+$message-warning-font-color: var(--color-warning) !default;
 /// color||Color|0
-$message-danger-font-color: $color-danger !default;
+$message-danger-font-color: var(--color-danger) !default;
 
 /* Notification
 -------------------------- */
@@ -426,13 +409,13 @@ $notification-close-color: $color-text-secondary !default;
 $notification-close-hover-color: $color-text-regular !default;
 
 /// color||Color|0
-$notification-success-icon-color: $color-success !default;
+$notification-success-icon-color: var(--color-success) !default;
 /// color||Color|0
-$notification-info-icon-color: $color-info !default;
+$notification-info-icon-color: var(--color-info) !default;
 /// color||Color|0
-$notification-warning-icon-color: $color-warning !default;
+$notification-warning-icon-color: var(--color-warning) !default;
 /// color||Color|0
-$notification-danger-icon-color: $color-danger !default;
+$notification-danger-icon-color: var(--color-danger) !default;
 
 /* Input
 -------------------------- */
@@ -461,7 +444,7 @@ $input-max-width: 314px !default;
 $input-hover-border: $border-color-hover !default;
 $input-clear-hover-color: $color-text-secondary !default;
 
-$input-focus-border: $color-primary !default;
+$input-focus-border: var(--color-primary) !default;
 $input-focus-fill: $color-white !default;
 
 $input-disabled-fill: $disabled-fill-base !default;
@@ -487,7 +470,7 @@ $input-mini-height: 28px !default;
 /// color||Color|0
 $cascader-menu-font-color: $color-text-regular !default;
 /// color||Color|0
-$cascader-menu-selected-font-color: $color-primary !default;
+$cascader-menu-selected-font-color: var(--color-primary) !default;
 $cascader-menu-fill: $fill-base !default;
 $cascader-menu-font-size: $font-size-base !default;
 $cascader-menu-radius: $border-radius-base !default;
@@ -570,35 +553,35 @@ $button-disabled-background-color: $color-white !default;
 $button-disabled-border-color: $border-color-lighter !default;
 
 /// color||Color|0
-$button-primary-border-color: $color-primary !default;
+$button-primary-border-color: var(--color-primary) !default;
 /// color||Color|0
 $button-primary-font-color: $color-white !default;
 /// color||Color|0
-$button-primary-background-color: $color-primary !default;
+$button-primary-background-color: var(--color-primary) !default;
 /// color||Color|0
-$button-success-border-color: $color-success !default;
+$button-success-border-color: var(--color-success) !default;
 /// color||Color|0
 $button-success-font-color: $color-white !default;
 /// color||Color|0
-$button-success-background-color: $color-success !default;
+$button-success-background-color: var(--color-success) !default;
 /// color||Color|0
-$button-warning-border-color: $color-warning !default;
+$button-warning-border-color: var(--color-warning) !default;
 /// color||Color|0
 $button-warning-font-color: $color-white !default;
 /// color||Color|0
-$button-warning-background-color: $color-warning !default;
+$button-warning-background-color: var(--color-warning) !default;
 /// color||Color|0
-$button-danger-border-color: $color-danger !default;
+$button-danger-border-color: var(--color-danger) !default;
 /// color||Color|0
 $button-danger-font-color: $color-white !default;
 /// color||Color|0
-$button-danger-background-color: $color-danger !default;
+$button-danger-background-color: var(--color-danger) !default;
 /// color||Color|0
-$button-info-border-color: $color-info !default;
+$button-info-border-color: var(--color-info) !default;
 /// color||Color|0
 $button-info-font-color: $color-white !default;
 /// color||Color|0
-$button-info-background-color: $color-info !default;
+$button-info-background-color: var(--color-info) !default;
 
 $button-hover-tint-percent: 20% !default;
 $button-active-shade-percent: 10% !default;
@@ -611,7 +594,7 @@ $cascader-height: 200px !default;
 /* Switch
 -------------------------- */
 /// color||Color|0
-$switch-on-color: $color-primary !default;
+$switch-on-color: var(--color-primary) !default;
 /// color||Color|0
 $switch-off-color: $border-color-base !default;
 /// fontSize||Font|1
@@ -673,7 +656,7 @@ $pagination-button-disabled-color: $color-text-placeholder !default;
 /// color||Color|0
 $pagination-button-disabled-background-color: $color-white !default;
 /// color||Color|0
-$pagination-hover-color: $color-primary !default;
+$pagination-hover-color: var(--color-primary) !default;
 
 /* Popup
 -------------------------- */
@@ -716,15 +699,15 @@ $tooltip-padding: 10px !default;
 /* Tag
 -------------------------- */
 /// color||Color|0
-$tag-info-color: $color-info !default;
+$tag-info-color: var(--color-info) !default;
 /// color||Color|0
-$tag-primary-color: $color-primary !default;
+$tag-primary-color: var(--color-primary) !default;
 /// color||Color|0
-$tag-success-color: $color-success !default;
+$tag-success-color: var(--color-success) !default;
 /// color||Color|0
-$tag-warning-color: $color-warning !default;
+$tag-warning-color: var(--color-warning) !default;
 /// color||Color|0
-$tag-danger-color: $color-danger !default;
+$tag-danger-color: var(--color-danger) !default;
 /// fontSize||Font|1
 $tag-font-size: 12px !default;
 $tag-border-radius: 4px !default;
@@ -748,7 +731,7 @@ $dropdown-menuItem-hover-color: $link-color !default;
 /* Badge
 -------------------------- */
 /// color||Color|0
-$badge-background-color: $color-danger !default;
+$badge-background-color: var(--color-danger) !default;
 $badge-radius: 10px !default;
 /// fontSize||Font|1
 $badge-font-size: 12px !default;
@@ -768,7 +751,7 @@ $card-padding: 20px !default;
 /* Slider
 --------------------------*/
 /// color||Color|0
-$slider-main-background-color: $color-primary !default;
+$slider-main-background-color: var(--color-primary) !default;
 /// color||Color|0
 $slider-runway-background-color: $border-color-light !default;
 $slider-button-hover-color: function.saturation(--color-primary-h, --color-primary-s, --color-primary-l, 8%) !default;
@@ -825,9 +808,9 @@ $datepicker-inrange-background-color: $border-color-xlight !default;
 /// color||Color|0
 $datepicker-inrange-hover-background-color: $border-color-xlight !default;
 /// color||Color|0
-$datepicker-active-color: $color-primary !default;
+$datepicker-active-color: var(--color-primary) !default;
 /// color||Color|0
-$datepicker-hover-font-color: $color-primary !default;
+$datepicker-hover-font-color: var(--color-primary) !default;
 $datepicker-cell-hover-color: #fff !default;
 
 /* Loading
@@ -918,7 +901,7 @@ $timeline-node-color: $border-color-light !default;
 /// color||Color|0
 $backtop-background-color: $color-white !default;
 /// color||Color|0
-$backtop-font-color: $color-primary !default;
+$backtop-font-color: var(--color-primary) !default;
 /// color||Color|0
 $backtop-hover-background-color: $border-color-xlight !default;
 
@@ -931,19 +914,19 @@ $link-font-weight: $font-weight-primary !default;
 /// color||Color|0
 $link-default-font-color: $color-text-regular !default;
 /// color||Color|0
-$link-default-active-color: $color-primary !default;
+$link-default-active-color: var(--color-primary) !default;
 /// color||Color|0
 $link-disabled-font-color: $color-text-placeholder !default;
 /// color||Color|0
-$link-primary-font-color: $color-primary !default;
+$link-primary-font-color: var(--color-primary) !default;
 /// color||Color|0
-$link-success-font-color: $color-success !default;
+$link-success-font-color: var(--color-success) !default;
 /// color||Color|0
-$link-warning-font-color: $color-warning !default;
+$link-warning-font-color: var(--color-warning) !default;
 /// color||Color|0
-$link-danger-font-color: $color-danger !default;
+$link-danger-font-color: var(--color-danger) !default;
 /// color||Color|0
-$link-info-font-color: $color-info !default;
+$link-info-font-color: var(--color-info) !default;
 /* Calendar
 --------------------------*/
 /// border||Other|4

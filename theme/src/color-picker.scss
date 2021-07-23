@@ -25,7 +25,7 @@
     }
 
     &.selected {
-      box-shadow: 0 0 3px 2px var.$color-primary;
+      box-shadow: 0 0 3px 2px var(--color-primary);
     }
 
     > div {
@@ -221,19 +221,19 @@
       cursor: not-allowed;
     }
     &:hover {
-      color: var.$color-primary;
-      border-color: var.$color-primary;
+      color: var(--color-primary);
+      border-color: var(--color-primary);
     }
   }
 
   @include mixins.e(link-btn) {
     cursor: pointer;
-    color: var.$color-primary;
+    color: var(--color-primary);
     text-decoration: none;
     padding: 15px;
     font-size: 12px;
     &:hover {
-      color: tint(var.$color-primary, var.$button-hover-tint-percent);
+      color: tint(var(--color-primary), var.$button-hover-tint-percent);
     }
   }
 }

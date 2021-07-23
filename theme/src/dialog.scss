@@ -47,12 +47,12 @@
     font-size: var.$message-close-size;
 
     .el-dialog__close {
-      color: var.$color-info;
+      color: var(--color-info);
     }
 
     &:focus, &:hover {
       .el-dialog__close {
-        color: var.$color-primary;
+        color: var(--color-primary);
       }
     }
   }

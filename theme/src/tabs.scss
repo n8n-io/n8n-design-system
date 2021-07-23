@@ -12,7 +12,7 @@
     bottom: 0;
     left: 0;
     height: 2px;
-    background-color: var.$color-primary;
+    background-color: var(--color-primary);
     z-index: 1;
     transition: transform .3s cubic-bezier(.645,.045,.355,1);
     list-style: none;
@@ -36,7 +36,7 @@
     }
 
     &:hover {
-      color: var.$color-primary;
+      color: var(--color-primary);
     }
   }
   @include mixins.e(nav-wrap) {
@@ -109,7 +109,7 @@
     }
 
     &:focus.is-active.is-focus:not(:active) {
-      box-shadow: 0 0 2px 2px var.$color-primary inset;
+      box-shadow: 0 0 2px 2px var(--color-primary) inset;
       border-radius: 3px;
     }
 
@@ -130,11 +130,11 @@
     }
 
     @include mixins.when(active) {
-      color: var.$color-primary;
+      color: var(--color-primary);
     }
 
     &:hover {
-      color: var.$color-primary;
+      color: var(--color-primary);
       cursor: pointer;
     }
 
@@ -237,13 +237,13 @@
       }
 
       &.is-active {
-        color: var.$color-primary;
+        color: var(--color-primary);
         background-color: var.$color-white;
         border-right-color: var.$border-color-base;
         border-left-color: var.$border-color-base;
       }
       &:not(.is-disabled):hover {
-        color: var.$color-primary;
+        color: var(--color-primary);
       }
       &.is-disabled {
         color: var.$disabled-color-base;

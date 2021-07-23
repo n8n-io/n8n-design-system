@@ -61,31 +61,31 @@
 
   @include mixins.when(success) {
     .el-progress-bar__inner {
-      background-color: var.$color-success;
+      background-color: var(--color-success);
     }
 
     .el-progress__text {
-      color: var.$color-success;
+      color: var(--color-success);
     }
   }
 
   @include mixins.when(warning) {
     .el-progress-bar__inner {
-      background-color: var.$color-warning;
+      background-color: var(--color-warning);
     }
 
     .el-progress__text {
-      color: var.$color-warning;
+      color: var(--color-warning);
     }
   }
 
   @include mixins.when(exception) {
     .el-progress-bar__inner {
-      background-color: var.$color-danger;
+      background-color: var(--color-danger);
     }
 
     .el-progress__text {
-      color: var.$color-danger;
+      color: var(--color-danger);
     }
   }
 }
@@ -111,7 +111,7 @@
     left: 0;
     top: 0;
     height: 100%;
-    background-color: var.$color-primary;
+    background-color: var(--color-primary);
     text-align: right;
     border-radius: 100px;
     line-height: 1;

@@ -37,18 +37,18 @@
     }
 
     @include mixins.when(success) {
-      color: var.$color-success;
-      border-color: var.$color-success;
+      color: var(--color-success);
+      border-color: var(--color-success);
     }
 
     @include mixins.when(error) {
-      color: var.$color-danger;
-      border-color: var.$color-danger;
+      color: var(--color-danger);
+      border-color: var(--color-danger);
     }
 
     @include mixins.when(finish) {
-      color: var.$color-primary;
-      border-color: var.$color-primary;
+      color: var(--color-primary);
+      border-color: var(--color-primary);
     }
   }
 
@@ -131,15 +131,15 @@
     }
 
     @include mixins.when(success) {
-      color: var.$color-success;
+      color: var(--color-success);
     }
 
     @include mixins.when(error) {
-      color: var.$color-danger;
+      color: var(--color-danger);
     }
 
     @include mixins.when(finish) {
-      color: var.$color-primary;
+      color: var(--color-primary);
     }
   }
 
@@ -159,15 +159,15 @@
     }
 
     @include mixins.when(success) {
-      color: var.$color-success;
+      color: var(--color-success);
     }
 
     @include mixins.when(error) {
-      color: var.$color-danger;
+      color: var(--color-danger);
     }
 
     @include mixins.when(finish) {
-      color: var.$color-primary;
+      color: var(--color-primary);
     }
   }
 

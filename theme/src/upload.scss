@@ -45,16 +45,16 @@
     }
 
     &:hover {
-      border-color: var.$color-primary;
-      color: var.$color-primary;
+      border-color: var(--color-primary);
+      color: var(--color-primary);
     }
   }
   &:focus {
-    border-color: var.$color-primary;
-    color: var.$color-primary;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
 
     .el-upload-dragger {
-      border-color: var.$color-primary;
+      border-color: var(--color-primary);
     }
   }
 }
@@ -94,18 +94,18 @@
     text-align: center;
 
     em {
-      color: var.$color-primary;
+      color: var(--color-primary);
       font-style: normal;
     }
   }
 
   &:hover {
-    border-color: var.$color-primary;
+    border-color: var(--color-primary);
   }
 
   @include mixins.when(dragover) {
     background-color: rgba(32, 159, 255, .06);
-    border: 2px dashed var.$color-primary;
+    border: 2px dashed var(--color-primary);
   }
 }
 
@@ -147,7 +147,7 @@
     }
 
     & .el-icon-upload-success {
-      color: var.$color-success;
+      color: var(--color-success);
     }
 
     .el-icon-close {
@@ -173,7 +173,7 @@
       font-size: 12px;
       cursor: pointer;
       opacity: 1;
-      color: var.$color-primary;
+      color: var(--color-primary);
     }
     
     &:hover {
@@ -260,7 +260,7 @@
     display: none;
 
     &:hover {
-      color: var.$color-primary;
+      color: var(--color-primary);
     }
   }
 

@@ -21,7 +21,7 @@
 }
 
 .time-select-item.selected:not(.disabled) {
-  color: var.$color-primary;
+  color: var(--color-primary);
   font-weight: bold;
 }
 

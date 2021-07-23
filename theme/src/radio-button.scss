@@ -29,7 +29,7 @@
     @include button.button-size(var.$button-padding-vertical, var.$button-padding-horizontal, var.$button-font-size, 0);
 
     &:hover {
-      color: var.$color-primary;
+      color: var(--color-primary);
     }
 
     & [class*="el-icon-"] {

@@ -61,12 +61,12 @@
     cursor: pointer;
 
     .el-message-box__close {
-      color: var.$color-info;
+      color: var(--color-info);
     }
 
     &:focus, &:hover {
       .el-message-box__close {
-        color: var.$color-primary;
+        color: var(--color-primary);
       }
     }
 
@@ -86,9 +86,9 @@
     padding-top: 15px;
 
     & input.invalid {
-      border-color: var.$color-danger;
+      border-color: var(--color-danger);
       &:focus {
-        border-color: var.$color-danger;
+        border-color: var(--color-danger);
       }
     }
   }
@@ -136,7 +136,7 @@
   }
 
   @include mixins.e(errormsg) {
-    color: var.$color-danger;
+    color: var(--color-danger);
     font-size: var.$messagebox-error-font-size;
     min-height: 18px;
     margin-top: 2px;

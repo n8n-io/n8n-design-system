@@ -24,7 +24,7 @@
     height: var.$radio-bordered-height;
 
     &.is-checked {
-      border-color: var.$color-primary;
+      border-color: var(--color-primary);
     }
 
     &.is-disabled {

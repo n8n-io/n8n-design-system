@@ -35,7 +35,7 @@
       }
     }
     &.focusing:focus:not(:hover){
-      color: var.$color-primary;
+      color: var(--color-primary);
     }
     @include mixins.when(active) {
       border-bottom-color: transparent;

@@ -41,15 +41,15 @@
     @each $type in (primary, success, warning, info, danger) {
       @include mixins.m($type) {
         @if $type == primary {
-          background-color: var.$color-primary;
+          background-color: var(--color-primary);
         } @else if $type == success {
-          background-color: var.$color-success;
+          background-color: var(--color-success);
         } @else if $type == warning {
-          background-color: var.$color-warning;
+          background-color: var(--color-warning);
         } @else if $type == info {
-          background-color: var.$color-info;
+          background-color: var(--color-info);
         } @else {
-          background-color: var.$color-danger;
+          background-color: var(--color-danger);
         }
       }
     }

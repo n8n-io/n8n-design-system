@@ -23,7 +23,7 @@
     height: var.$checkbox-bordered-height;
 
     &.is-checked {
-      border-color: var.$color-primary;
+      border-color: var(--color-primary);
     }
 
     &.is-disabled {
@@ -272,7 +272,7 @@
     @include button.button-size(var.$button-padding-vertical, var.$button-padding-horizontal, var.$button-font-size, 0);
 
     &:hover {
-      color: var.$color-primary;
+      color: var(--color-primary);
     }
 
     & [class*="el-icon-"] {

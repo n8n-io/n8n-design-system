@@ -43,19 +43,19 @@
     }
 
     @include mixins.m(primary) {
-      background-color: var.$color-primary;
+      background-color: var(--color-primary);
     }
     @include mixins.m(success) {
-      background-color: var.$color-success;
+      background-color: var(--color-success);
     }
     @include mixins.m(warning) {
-      background-color: var.$color-warning;
+      background-color: var(--color-warning);
     }
     @include mixins.m(danger) {
-      background-color: var.$color-danger;
+      background-color: var(--color-danger);
     }
     @include mixins.m(info) {
-      background-color: var.$color-info;
+      background-color: var(--color-info);
     }
   }
 

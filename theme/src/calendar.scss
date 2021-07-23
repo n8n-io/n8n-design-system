@@ -51,7 +51,7 @@
     }
 
     @include mixins.when(today) {
-      color: var.$color-primary;
+      color: var(--color-primary);
     }
   }
 

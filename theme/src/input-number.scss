@@ -32,7 +32,7 @@
     font-size: 13px;
 
     &:hover {
-      color: var.$color-primary;
+      color: var(--color-primary);
 
       &:not(.is-disabled) ~ .el-input .el-input__inner:not(.is-disabled) {
         border-color: var.$input-focus-border;

@@ -21,7 +21,7 @@
     padding: 10px;
     border-radius: 50%;
     color: var.$color-white;
-    background-color: var.$color-primary;
+    background-color: var(--color-primary);
     font-size: 0;
 
     @include mixins.when(with-texts) {
@@ -107,7 +107,7 @@
     }
 
     &:hover {
-      color: var.$color-primary;
+      color: var(--color-primary);
     }
 
     &.el-checkbox .el-checkbox__label {

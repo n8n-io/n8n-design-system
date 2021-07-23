@@ -113,7 +113,7 @@
     }
   }
   @include mixins.e(error) {
-    color: var.$color-danger;
+    color: var(--color-danger);
     font-size: 12px;
     line-height: 1;
     padding-top: 4px;
@@ -135,7 +135,7 @@
       & > .el-form-item__label:before,
       & .el-form-item__label-wrap > .el-form-item__label:before {
         content: '*';
-        color: var.$color-danger;
+        color: var(--color-danger);
         margin-right: 4px;
       }
     }
@@ -145,7 +145,7 @@
     & .el-input__inner,
     & .el-textarea__inner {
       &, &:focus {
-        border-color: var.$color-danger;
+        border-color: var(--color-danger);
       }
     }
     & .el-input-group__append,
@@ -155,7 +155,7 @@
       }
     }
     .el-input__validateIcon {
-      color: var.$color-danger;
+      color: var(--color-danger);
     }
   }
 

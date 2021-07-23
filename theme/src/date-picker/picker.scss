@@ -104,10 +104,10 @@
   }
 
   @include mixins.when(active) {
-    border-color: var.$color-primary;
+    border-color: var(--color-primary);
 
     &:hover {
-      border-color: var.$color-primary;
+      border-color: var(--color-primary);
     }
   }
 

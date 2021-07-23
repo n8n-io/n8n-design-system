@@ -170,7 +170,7 @@
   }
   @include mixins.m(text) {
     border-color: transparent;
-    color: var.$color-primary;
+    color: var(--color-primary);
     background: transparent;
     padding-left: 0;
     padding-right: 0;

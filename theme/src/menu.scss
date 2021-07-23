@@ -82,7 +82,7 @@
 
       &.is-active {
         .el-submenu__title {
-          border-bottom: 2px solid var.$color-primary;
+          border-bottom: 2px solid var(--color-primary);
           color: var.$color-text-primary;
         }
       }
@@ -125,7 +125,7 @@
       color: var.$color-text-primary;
     }
     & > .el-menu-item.is-active {
-      border-bottom: 2px solid var.$color-primary;
+      border-bottom: 2px solid var(--color-primary);
       color: var.$color-text-primary;
     }
   }
@@ -208,7 +208,7 @@
     vertical-align: middle;
   }
   @include mixins.when(active) {
-    color: var.$color-primary;
+    color: var(--color-primary);
     i {
       color: inherit;
     }
@@ -246,7 +246,7 @@
   }
   @include mixins.when(active) {
     .el-submenu__title {
-      border-bottom-color: var.$color-primary;
+      border-bottom-color: var(--color-primary);
     }
   }
   @include mixins.when(opened) {
