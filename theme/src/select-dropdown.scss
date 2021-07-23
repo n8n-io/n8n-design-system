@@ -6,7 +6,7 @@
   position: absolute;
   z-index: #{var.$index-top + 1};
   border: var.$select-dropdown-border;
-  border-radius: var.$border-radius-base;
+  border-radius: var(--border-radius-base);
   background-color: var.$select-dropdown-background;
   box-shadow: var.$select-dropdown-shadow;
   box-sizing: border-box;

@@ -129,6 +129,8 @@
   --color-background-xlight: hsl(var(--color-background-xlight-h), var(--color-background-xlight-s), var(--color-background-xlight-l));
 
   --border-radius-base: 4px;
+  --border-radius-small: 2px;
+
   --border-style-base: solid;
   --border-width-base: 1px;
   --border-base: var(--border-width-base) var(--border-style-base) var(--color-foreground-base);

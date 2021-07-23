@@ -44,7 +44,7 @@
   &:first-child {
     .el-radio-button__inner {
       border-left: var(--border-base);
-      border-radius: var.$border-radius-base 0 0 var.$border-radius-base;
+      border-radius: var(--border-radius-base) 0 0 var(--border-radius-base);
       box-shadow: none !important;
     }
   }
@@ -81,13 +81,13 @@
 
   &:last-child {
     .el-radio-button__inner {
-      border-radius: 0 var.$border-radius-base var.$border-radius-base 0;
+      border-radius: 0 var(--border-radius-base) var(--border-radius-base) 0;
     }
   }
 
   &:first-child:last-child {
     .el-radio-button__inner {
-      border-radius: var.$border-radius-base;
+      border-radius: var(--border-radius-base);
     }
   }
 

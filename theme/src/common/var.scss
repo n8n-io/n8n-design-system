@@ -85,13 +85,7 @@ $link-hover-color: var(--color-primary) !default;
 -------------------------- */
 $border-color-hover: $color-text-placeholder !default;
 /// borderRadius|1|Radius|0
-$border-radius-base: 4px !default;
-/// borderRadius|1|Radius|0
-$border-radius-small: 2px !default;
-/// borderRadius|1|Radius|0
 $border-radius-circle: 100% !default;
-/// borderRadius|1|Radius|0
-$border-radius-zero: 0 !default;
 
 // Box-shadow
 /// boxShadow|1|Shadow|1
@@ -155,7 +149,7 @@ $checkbox-font-color: $color-text-regular !default;
 $checkbox-input-height: 14px !default;
 $checkbox-input-width: 14px !default;
 /// borderRadius||Border|2
-$checkbox-border-radius: $border-radius-small !default;
+$checkbox-border-radius: var(--border-radius-small);
 /// color||Color|0
 $checkbox-background-color: $color-white !default;
 $checkbox-input-border: var(--border-base) !default;
@@ -313,7 +307,7 @@ $select-dropdown-border: solid 1px $border-color-light !default;
 -------------------------- */
 $alert-padding: 8px 16px !default;
 /// borderRadius||Border|2
-$alert-border-radius: $border-radius-base !default;
+$alert-border-radius: var(--border-radius-base) !default;
 /// fontSize||Font|1
 $alert-title-font-size: 13px !default;
 /// fontSize||Font|1
@@ -427,7 +421,7 @@ $input-height: 40px !default;
 $input-border: var(--border-base) !default;
 $input-border-color: $border-color-base !default;
 /// borderRadius||Border|2
-$input-border-radius: $border-radius-base !default;
+$input-border-radius: var(--border-radius-base) !default;
 $input-border-color-hover: $border-color-hover !default;
 /// color||Color|0
 $input-background-color: $color-white !default;
@@ -471,7 +465,7 @@ $cascader-menu-font-color: $color-text-regular !default;
 $cascader-menu-selected-font-color: var(--color-primary) !default;
 $cascader-menu-fill: $fill-base !default;
 $cascader-menu-font-size: $font-size-base !default;
-$cascader-menu-radius: $border-radius-base !default;
+$cascader-menu-radius: var(--border-radius-base) !default;
 $cascader-menu-border: solid 1px $border-color-light !default;
 $cascader-menu-shadow: $box-shadow-light !default;
 $cascader-node-background-hover: $background-color-base !default;
@@ -506,7 +500,6 @@ $tab-vertical-header-count-fill: $color-text-secondary !default;
 /// fontSize||Font|1
 $button-font-size: $font-size-base !default;
 /// borderRadius||Border|2
-$button-border-radius: $border-radius-base !default;
 /// padding||Spacing|3
 $button-padding-vertical: 12px !default;
 /// padding||Spacing|3
@@ -515,7 +508,7 @@ $button-padding-horizontal: 20px !default;
 /// fontSize||Font|1
 $button-medium-font-size: $font-size-base !default;
 /// borderRadius||Border|2
-$button-medium-border-radius: $border-radius-base !default;
+$button-medium-border-radius: var(--border-radius-base) !default;
 /// padding||Spacing|3
 $button-medium-padding-vertical: 10px !default;
 /// padding||Spacing|3
@@ -523,14 +516,14 @@ $button-medium-padding-horizontal: 20px !default;
 
 /// fontSize||Font|1
 $button-small-font-size: 12px !default;
-$button-small-border-radius: #{$border-radius-base - 1} !default;
+$button-small-border-radius: #{var(--border-radius-base) - 1} !default;
 /// padding||Spacing|3
 $button-small-padding-vertical: 9px !default;
 /// padding||Spacing|3
 $button-small-padding-horizontal: 15px !default;
 /// fontSize||Font|1
 $button-mini-font-size: 12px !default;
-$button-mini-border-radius: #{$border-radius-base - 1} !default;
+$button-mini-border-radius: #{var(--border-radius-base) - 1} !default;
 /// padding||Spacing|3
 $button-mini-padding-vertical: 7px !default;
 /// padding||Spacing|3
@@ -860,7 +853,7 @@ $collapse-content-font-color: $color-text-primary !default;
 /* Transfer
 --------------------------*/
 $transfer-border-color: $border-color-lighter !default;
-$transfer-border-radius: $border-radius-base !default;
+$transfer-border-radius: var(--border-radius-base) !default;
 /// height||Other|4
 $transfer-panel-width: 200px !default;
 /// height||Other|4
@@ -949,7 +942,7 @@ $avatar-text-font-size: 14px !default;
 /// fontSize||Font Size|1
 $avatar-icon-font-size: 18px !default;
 /// borderRadius||Border|2
-$avatar-border-radius: $border-radius-base !default;
+$avatar-border-radius: var(--border-radius-base) !default;
 /// size|1|Avatar Size|3
 $avatar-large-size: 40px !default;
 /// size|1|Avatar Size|3

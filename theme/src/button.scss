@@ -223,10 +223,10 @@
       border-bottom-left-radius: 0;
     }
     &:first-child:last-child {
-      border-top-right-radius: var.$button-border-radius;
-      border-bottom-right-radius: var.$button-border-radius;
-      border-top-left-radius: var.$button-border-radius;
-      border-bottom-left-radius: var.$button-border-radius;
+      border-top-right-radius: var(--border-radius-base);
+      border-bottom-right-radius: var(--border-radius-base);
+      border-top-left-radius: var(--border-radius-base);
+      border-bottom-left-radius: var(--border-radius-base);
 
       &.is-round {
         border-radius: 20px;

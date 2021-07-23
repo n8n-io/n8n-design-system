@@ -16,7 +16,7 @@
 
   @include mixins.when(bordered) {
     padding: var.$checkbox-bordered-padding;
-    border-radius: var.$border-radius-base;
+    border-radius: var(--border-radius-base);
     border: var(--border-base);
     box-sizing: border-box;
     line-height: normal;
@@ -321,7 +321,7 @@
   &:first-child {
     .el-checkbox-button__inner {
       border-left: var(--border-base);
-      border-radius: var.$border-radius-base 0 0 var.$border-radius-base;
+      border-radius: var(--border-radius-base) 0 0 var(--border-radius-base);
       box-shadow: none !important;
     }
   }
@@ -334,7 +334,7 @@
 
   &:last-child {
     .el-checkbox-button__inner {
-      border-radius: 0 var.$border-radius-base var.$border-radius-base 0;
+      border-radius: 0 var(--border-radius-base) var(--border-radius-base) 0;
     }
   }
   @include mixins.m(medium) {

@@ -71,7 +71,7 @@
   margin: 5px 0;
   background-color: var.$color-white;
   border: 1px solid var.$border-color-lighter;
-  border-radius: var.$border-radius-base;
+  border-radius: var(--border-radius-base);
   box-shadow: var.$dropdown-menu-box-shadow;
 
   @include mixins.e(item) {

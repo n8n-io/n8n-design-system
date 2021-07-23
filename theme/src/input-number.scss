@@ -47,13 +47,13 @@
 
   @include mixins.e(increase) {
     right: 1px;
-    border-radius: 0 var.$border-radius-base var.$border-radius-base 0;
+    border-radius: 0 var(--border-radius-base) var(--border-radius-base) 0;
     border-left: var(--border-base);
   }
 
   @include mixins.e(decrease) {
     left: 1px;
-    border-radius: var.$border-radius-base 0 0 var.$border-radius-base;
+    border-radius: var(--border-radius-base) 0 0 var(--border-radius-base);
     border-right: var(--border-base);
   }
 
@@ -145,7 +145,7 @@
     }
 
     @include mixins.e(increase) {
-      border-radius: 0 var.$border-radius-base 0 0;
+      border-radius: 0 var(--border-radius-base) 0 0;
       border-bottom: var(--border-base);
     }
 
@@ -156,7 +156,7 @@
       left: auto;
       border-right: none;
       border-left: var(--border-base);
-      border-radius: 0 0 var.$border-radius-base 0;
+      border-radius: 0 0 var(--border-radius-base) 0;
     }
 
     &[class*=medium] {

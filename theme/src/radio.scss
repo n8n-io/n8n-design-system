@@ -18,7 +18,7 @@
 
   @include mixins.when(bordered) {
     padding: var.$radio-bordered-padding;
-    border-radius: var.$border-radius-base;
+    border-radius: var(--border-radius-base);
     border: var(--border-base);
     box-sizing: border-box;
     height: var.$radio-bordered-height;

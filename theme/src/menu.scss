@@ -169,7 +169,7 @@
         left: 100%;
         z-index: 10;
         border: 1px solid var.$border-color-light;
-        border-radius: var.$border-radius-small;
+        border-radius: var(--border-radius-small);
         box-shadow: var.$box-shadow-light;
       }
 
@@ -185,7 +185,7 @@
     min-width: 200px;
     border: none;
     padding: 5px 0;
-    border-radius: var.$border-radius-small;
+    border-radius: var(--border-radius-small);
     box-shadow: var.$box-shadow-light;
 
     &-bottom-start {
