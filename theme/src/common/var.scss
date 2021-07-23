@@ -101,7 +101,6 @@ $link-hover-color: $color-primary !default;
 $border-width-base: 1px !default;
 $border-style-base: solid !default;
 $border-color-hover: $color-text-placeholder !default;
-$border-base: $border-width-base $border-style-base $border-color-base !default;
 /// borderRadius|1|Radius|0
 $border-radius-base: 4px !default;
 /// borderRadius|1|Radius|0
@@ -176,7 +175,7 @@ $checkbox-input-width: 14px !default;
 $checkbox-border-radius: $border-radius-small !default;
 /// color||Color|0
 $checkbox-background-color: $color-white !default;
-$checkbox-input-border: $border-base !default;
+$checkbox-input-border: var(--border-base) !default;
 
 /// color||Color|0
 $checkbox-disabled-border-color: $border-color-base !default;
@@ -241,7 +240,7 @@ $radio-input-width: 14px !default;
 $radio-input-border-radius: $border-radius-circle !default;
 /// color||Color|0
 $radio-input-background-color: $color-white !default;
-$radio-input-border: $border-base !default;
+$radio-input-border: var(--border-base) !default;
 /// color||Color|0
 $radio-input-border-color: $border-color-base !default;
 /// color||Color|0
@@ -444,7 +443,7 @@ $input-font-color: $color-text-regular !default;
 $input-width: 140px !default;
 /// height||Other|4
 $input-height: 40px !default;
-$input-border: $border-base !default;
+$input-border: var(--border-base) !default;
 $input-border-color: $border-color-base !default;
 /// borderRadius||Border|2
 $input-border-radius: $border-radius-base !default;

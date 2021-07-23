@@ -83,7 +83,7 @@
   }
 
   ~ .el-upload__files {
-    border-top: var.$border-base;
+    border-top: var(--border-base);
     margin-top: 7px;
     padding-top: 5px;
   }

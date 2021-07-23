@@ -283,7 +283,7 @@
     vertical-align: middle;
     display: table-cell;
     position: relative;
-    border: var.$border-base;
+    border: var(--border-base);
     border-radius: var.$input-border-radius;
     padding: 0 20px;
     width: 1px;

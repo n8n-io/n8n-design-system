@@ -29,12 +29,12 @@
     }
 
     @include mixins.when(disabled) {
-      border: var.$border-base;
+      border: var(--border-base);
       background-color: var.$background-color-base;
       color: var.$color-text-placeholder;
 
       &:hover {
-        border: var.$border-base;
+        border: var(--border-base);
         background-color: var.$background-color-base;
         color: var.$color-text-placeholder;
       }

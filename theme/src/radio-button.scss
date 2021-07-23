@@ -13,7 +13,7 @@
     white-space: nowrap;
     vertical-align: middle;
     background: var.$button-default-background-color;
-    border: var.$border-base;
+    border: var(--border-base);
     font-weight: var(--font-weight-semi-bold);
     border-left: 0;
     color: var.$button-default-font-color;
@@ -43,7 +43,7 @@
 
   &:first-child {
     .el-radio-button__inner {
-      border-left: var.$border-base;
+      border-left: var(--border-base);
       border-radius: var.$border-radius-base 0 0 var.$border-radius-base;
       box-shadow: none !important;
     }

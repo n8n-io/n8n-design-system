@@ -10,7 +10,7 @@
   line-height: 1;
   white-space: nowrap;
   cursor: pointer;
-  border: var.$border-base;
+  border: var(--border-base);
   -webkit-appearance: none;
   text-align: center;
   box-sizing: border-box;

@@ -17,7 +17,7 @@
   @include mixins.when(bordered) {
     padding: var.$checkbox-bordered-padding;
     border-radius: var.$border-radius-base;
-    border: var.$border-base;
+    border: var(--border-base);
     box-sizing: border-box;
     line-height: normal;
     height: var.$checkbox-bordered-height;
@@ -257,7 +257,7 @@
     vertical-align: middle;
     cursor: pointer;
     background: var.$button-default-background-color;
-    border: var.$border-base;
+    border: var(--border-base);
     border-left: 0;
     color: var.$button-default-font-color;
     -webkit-appearance: none;
@@ -320,7 +320,7 @@
 
   &:first-child {
     .el-checkbox-button__inner {
-      border-left: var.$border-base;
+      border-left: var(--border-base);
       border-radius: var.$border-radius-base 0 0 var.$border-radius-base;
       box-shadow: none !important;
     }
