@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 23 Jul 2021 07:58:25 GMT
+ * Generated on Fri, 23 Jul 2021 08:01:17 GMT
  */
 
 @mixin theme {
@@ -103,7 +103,7 @@
   --border-radius-base: 4px;
   --border-style-base: solid;
   --border-width-base: 1px;
-  --border-base: var(--border-width-base) var(--border-style-base) var(--border-width-base);
+  --border-base: var(--border-width-base) var(--border-style-base) var(--color-foreground-base);
   --font-size-2xs: 0.75rem;
   --font-size-xs: 0.8125rem;
   --font-size-s: 0.875rem;

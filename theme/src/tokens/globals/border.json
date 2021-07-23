@@ -16,7 +16,7 @@
 			}
 		},
 		"base": {
-			"value": "var(--border-width-base) var(--border-style-base) var(--border-width-base)"
+			"value": "var(--border-width-base) var(--border-style-base) var(--color-foreground-base)"
 		}
 	}
 }
