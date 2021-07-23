@@ -5,8 +5,8 @@
   min-width: var.$message-min-width;
   box-sizing: border-box;
   border-radius: var.$border-radius-base;
-  border-width: var.$border-width-base;
-  border-style: var.$border-style-base;
+  border-width: var(--border-width-base);
+  border-style: var(--border-style-base);
   border-color: var.$border-color-lighter;
   position: fixed;
   left: 50%;
