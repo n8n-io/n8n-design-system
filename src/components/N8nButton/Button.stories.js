@@ -18,7 +18,7 @@ export default {
     size: {
       control: {
         type: "select",
-        options: ["small", "medium", "large"],
+        options: ["sm", "md", "lg"],
       },
     },
     loading: {
@@ -64,7 +64,7 @@ const ManyTemplate = (args, { argTypes }) => ({
     N8nButton,
   },
   template:
-    '<div> <n8n-button v-bind="$props" size="large" @click="onClick" />  <n8n-button v-bind="$props" size="medium" @click="onClick" />  <n8n-button v-bind="$props" size="small" @click="onClick" />  <n8n-button v-bind="$props" :loading="true" @click="onClick" />  <n8n-button v-bind="$props" :disabled="true" @click="onClick" /></div>',
+    '<div> <n8n-button v-bind="$props" size="lg" @click="onClick" />  <n8n-button v-bind="$props" size="md" @click="onClick" />  <n8n-button v-bind="$props" size="sm" @click="onClick" />  <n8n-button v-bind="$props" :loading="true" @click="onClick" />  <n8n-button v-bind="$props" :disabled="true" @click="onClick" /></div>',
   methods,
 });
 

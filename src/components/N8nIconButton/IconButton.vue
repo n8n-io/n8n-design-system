@@ -1,20 +1,15 @@
 <template functional>
   <el-button
-    type="primary"
-    :plain="props.type === 'secondary'"
+    :type="props.type"
     :disabled="props.disabled"
     :size="$options.mapToSize(props.size)"
     :loading="props.loading"
     :title="props.title"
-    :class="$style.button"
+    :circle="props.type === 'primary'"
     @click="listeners.click"
-    round
   >
-    <span  :class="$style.icon" v-if="props.loading || props.icon">
-	<N8nSpinner v-if="props.loading" />
-	<N8nIcon v-else-if="props.icon" :icon="props.icon" size="sm" />
-    </span>
-    <span>{{ props.label }}</span>
+	<N8nSpinner v-if="props.loading" :size="$options.mapToIconSize(props.size)" />
+	<N8nIcon v-else :icon="props.icon" :size="$options.mapToIconSize(props.size)"/>
   </el-button>
 </template>
 
@@ -34,13 +29,13 @@ const sizeMap = {
   lg: "",
 };
 
+const iconSizeMap = {
+  sm: 'md'
+};
+
 export default {
   name: "n8n-button",
   props: {
-    label: {
-      type: String,
-      required: true,
-    },
     title: {
       type: String,
     },
@@ -68,35 +63,14 @@ export default {
     },
     icon: {
       type: String,
+      required: true,
     },
   },
-  mapToSize: (size) => sizeMap[size],
+  mapToSize: (size: string) => sizeMap[size],
+  mapToIconSize: (size: string) => iconSizeMap[size] || size,
 };
 </script>
 
 <style lang="scss">
 @use "~/theme/src/button.scss";
-</style>
-
-
-<style lang="scss" module>
-.button {
-	> i {
-		display: none;
-	}
-
-	> span {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-}
-.icon {
-	margin-right: var(--spacing-3xs);
-	display: inline-flex;
-
-	svg {
-		display: block;
-	}
-}
 </style>

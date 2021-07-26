@@ -103,6 +103,11 @@
   --color-foreground-light-l:  93%;
   --color-foreground-light: hsl(var(--color-foreground-light-h), var(--color-foreground-light-s), var(--color-foreground-light-l));
 
+  --color-foreground-xlight-h: 0;
+  --color-foreground-xlight-s:  0%;
+  --color-foreground-xlight-l:  100%;
+  --color-foreground-xlight: hsl(var(--color-foreground-xlight-h), var(--color-foreground-xlight-s), var(--color-foreground-xlight-l));
+
   --color-background-dark-h: 240;
   --color-background-dark-s:  4%;
   --color-background-dark-l:  19%;

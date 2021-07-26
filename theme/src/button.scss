@@ -11,7 +11,10 @@
   white-space: nowrap;
   cursor: pointer;
   border: var(--border-base);
-  background: var.$button-default-background-color;
+
+  color: var(--color-text-base);
+  border-color: var(--color-foreground-xlight);
+  background-color: var(--color-foreground-xlight);
 
   -webkit-appearance: none;
   text-align: center;
@@ -30,16 +33,16 @@
   );
 
   &:active {
-    color: function.saturation(
-      --color-primary-h,
-      --color-primary-s,
-      --color-primary-l,
+    color: function.lightness(
+      --color-foreground-xlight-h,
+      --color-foreground-xlight-s,
+      --color-foreground-xlight-l,
       -(var.$button-active-shade-percent)
     );
-    border-color: function.saturation(
-      --color-primary-h,
-      --color-primary-s,
-      --color-primary-l,
+    border-color: function.lightness(
+      --color-foreground-xlight-h,
+      --color-foreground-xlight-s,
+      --color-foreground-xlight-l,
       -(var.$button-active-shade-percent)
     );
     outline: none;
@@ -83,7 +86,7 @@
   }
   @include mixins.when(circle) {
     border-radius: var(--button-radius-circle);
-    padding: var.$button-padding-vertical;
+    padding: var(--spacing-xs);
   }
   @include mixins.m(primary) {
     @include button.button-variant(
@@ -143,7 +146,7 @@
       var.$button-medium-border-radius
     );
     @include mixins.when(circle) {
-      padding: var.$button-medium-padding-vertical;
+      padding: var(--spacing-2xs);
     }
   }
   @include mixins.m(small) {
@@ -154,7 +157,7 @@
       var.$button-small-border-radius
     );
     @include mixins.when(circle) {
-      padding: var.$button-small-padding-vertical;
+      padding: var(--spacing-3xs);
     }
   }
   @include mixins.m(mini) {
@@ -165,7 +168,7 @@
       var.$button-mini-border-radius
     );
     @include mixins.when(circle) {
-      padding: var.$button-mini-padding-vertical;
+      padding: var(--spacing-4xs);
     }
   }
   @include mixins.m(text) {
