@@ -8,6 +8,9 @@ export default {
     label: {
       control: "text",
     },
+    text: {
+      control: "text",
+    },
     type: {
       control: "select",
       options: ["primary", "secondary"],

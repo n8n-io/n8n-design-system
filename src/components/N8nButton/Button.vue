@@ -4,9 +4,10 @@
     :plain="props.type === 'secondary'"
     :disabled="props.disabled"
     :size="$options.mapToSize(props.size)"
-    @click="listeners.click"
     :loading="props.loading"
+    :title="props.title"
     :class="$style.button"
+    @click="listeners.click"
     round
   >
     <span  :class="$style.icon" v-if="props.loading || props.icon">
@@ -39,6 +40,9 @@ export default {
     label: {
       type: String,
       required: true,
+    },
+    title: {
+      type: String,
     },
     type: {
       type: String,
