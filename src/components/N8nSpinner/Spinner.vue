@@ -4,7 +4,6 @@
 
 <script>
 // import N8nIcon from "../N8nIcon";
-
 // Vue.component("N8nIcon", N8nIcon);
 
 export default {

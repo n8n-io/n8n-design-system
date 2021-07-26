@@ -8,13 +8,14 @@
     :title="props.title"
     :class="$style.button"
     @click="listeners.click"
-    round
+    :round="!props.circle"
+    :circle="props.circle"
   >
     <span  :class="$style.icon" v-if="props.loading || props.icon">
-	<N8nSpinner v-if="props.loading" />
-	<N8nIcon v-else-if="props.icon" :icon="props.icon" size="sm" />
+	<N8nSpinner v-if="props.loading" :size="props.iconSize" />
+	<N8nIcon v-else-if="props.icon" :icon="props.icon" :size="props.iconSize" />
     </span>
-    <span>{{ props.label }}</span>
+    <span v-if="props.label">{{ props.label }}</span>
   </el-button>
 </template>
 
@@ -39,7 +40,6 @@ export default {
   props: {
     label: {
       type: String,
-      required: true,
     },
     title: {
       type: String,
@@ -69,6 +69,13 @@ export default {
     icon: {
       type: String,
     },
+    iconSize: {
+      type: String,
+    },
+    circle: {
+      type: Boolean,
+      default: false,
+    },
   },
   mapToSize: (size) => sizeMap[size],
 };
@@ -90,9 +97,12 @@ export default {
 		justify-content: center;
 		align-items: center;
 	}
+
+	span + span {
+		margin-left: var(--spacing-3xs);
+	}
 }
 .icon {
-	margin-right: var(--spacing-3xs);
 	display: inline-flex;
 
 	svg {

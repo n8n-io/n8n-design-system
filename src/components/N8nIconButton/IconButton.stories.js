@@ -8,10 +8,6 @@ export default {
     title: {
       control: "text",
     },
-    type: {
-	control: "select",
-	options: ["primary", "secondary"]
-    },
     size: {
       control: {
         type: "select",
@@ -69,11 +65,3 @@ Primary.args = {
 	title: "my title",
 	type: "primary"
 };
-
-export const Secondary = ManyTemplate.bind({});
-Secondary.args = {
-	icon: "plus",
-	title: "my title",
-	type: "secondary"
-};
-

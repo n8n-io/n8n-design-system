@@ -31,6 +31,17 @@ export default {
         type: "text",
       },
     },
+    iconSize: {
+      control: {
+        type: "select",
+        options: ["sm", "md", "lg"] 
+      }
+    },
+    circle: {
+	control: {
+		type: 'boolean',
+	}
+    }
   },
   parameters: {
     design: {
