@@ -8,7 +8,7 @@ export default {
     label: {
       control: "text",
     },
-    text: {
+    title: {
       control: "text",
     },
     type: {
