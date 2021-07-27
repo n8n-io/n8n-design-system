@@ -2,7 +2,9 @@
   "name": "n8n-design-system",
   "version": "0.1.0",
   "private": true,
+  "main": "src/main.js",
   "scripts": {
+    "build": "vue-cli-service build --target lib ./src/main.js",
     "build-storybook": "build-storybook",
     "storybook": "start-storybook -p 6006",
     "build:tokens": "gulp build:tokens",
@@ -11,7 +13,7 @@
     "build:theme": "gulp build:theme",
     "watch:theme": "gulp watch:theme"
   },
-  "dependencies": {
+  "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/vue-fontawesome": "^2.0.2",
@@ -20,9 +22,7 @@
     "storybook-addon-themes": "^6.1.0",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
-    "vue-property-decorator": "^9.1.2"
-  },
-  "devDependencies": {
+    "vue-property-decorator": "^9.1.2",
     "@babel/core": "^7.14.6",
     "@storybook/addon-actions": "^6.3.4",
     "@storybook/addon-essentials": "^6.3.4",
