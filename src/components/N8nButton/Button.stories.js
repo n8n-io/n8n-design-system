@@ -42,6 +42,9 @@ export default {
         type: "boolean",
       },
     },
+    fullWidth: {
+	type: "boolean"
+    }
   },
   parameters: {
     design: {

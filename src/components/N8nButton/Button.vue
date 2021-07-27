@@ -6,7 +6,7 @@
     :size="$options.mapToSize(props.size)"
     :loading="props.loading"
     :title="props.title"
-    :class="$style.button"
+    :class="props.fullWidth ? $style.fullWidth : $style.button"
     @click="listeners.click"
     :round="!props.circle"
     :circle="props.circle"
@@ -30,6 +30,8 @@ import N8nIcon from "../N8nIcon";
 import N8nSpinner from "../N8nSpinner";
 
 Vue.component('ElButton', Button);
+Vue.component(N8nIcon.name, N8nIcon);
+Vue.component(N8nSpinner.name, N8nSpinner);
 
 const sizeMap: {[size: string]: string} = {
   sm: "small",
@@ -74,6 +76,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    fullWidth: {
+      type: Boolean,
+      default: false,
+    },
   },
   mapToSize: (size: string): string => sizeMap[size],
 };
@@ -99,6 +105,12 @@ export default {
     margin-left: var(--spacing-3xs);
   }
 }
+
+.fullWidth {
+	composes: button;
+	width: 100%;
+}
+
 .icon {
   display: inline-flex;
 

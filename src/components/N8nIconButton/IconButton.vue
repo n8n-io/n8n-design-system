@@ -6,7 +6,7 @@
     :loading="props.loading"
     :title="props.title"
     :icon="props.icon"
-    iconSize="lg"
+    :iconSize="props.size"
     @click="listeners.click"
     circle
   ></n8n-button>

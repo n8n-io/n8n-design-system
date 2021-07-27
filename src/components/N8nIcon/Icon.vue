@@ -1,6 +1,6 @@
 <template functional>
   <font-awesome-icon
-    :class="$style[props.size]"
+    :class="$style[`_${props.size}`]"
     :icon="props.icon"
     :spin="props.spin"
   />
@@ -30,19 +30,19 @@ export default {
 </script>
 
 <style lang="scss" module>
-.sm {
+._sm {
   font-size: 0.85em;
   height: 0.85em;
   width: 0.85em !important;
 }
 
-.md {
+._md {
   font-size: 1em;
   height: 1em;
   width: 1em !important;
 }
 
-.lg {
+._lg {
   font-size: 1.33em;
   height: 1.33em;
   width: 1.33em !important;

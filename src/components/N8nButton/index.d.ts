@@ -31,4 +31,7 @@ export declare class N8nButton extends N8nComponent {
 
   /** Size of icon */
   iconSize: N8nComponentSize
+
+  /** Ful width */
+  fullWidth: boolean;
 }
