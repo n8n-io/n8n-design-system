@@ -26,7 +26,7 @@ export default {
     },
   },
   parameters: {
-    backgrounds: { default: '--color-background-light' },
+    backgrounds: { default: "--color-background-light" },
   },
 };
 
@@ -46,7 +46,7 @@ const Template = (args, { argTypes }) => ({
 export const Button = Template.bind({});
 Button.args = {
   icon: "plus",
-  title: "my title"
+  title: "my title",
 };
 
 const ManyTemplate = (args, { argTypes }) => ({
@@ -61,7 +61,7 @@ const ManyTemplate = (args, { argTypes }) => ({
 
 export const Primary = ManyTemplate.bind({});
 Primary.args = {
-	icon: "plus",
-	title: "my title",
-	type: "primary"
+  icon: "plus",
+  title: "my title",
+  type: "primary",
 };

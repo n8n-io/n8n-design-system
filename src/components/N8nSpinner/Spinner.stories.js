@@ -4,13 +4,13 @@ export default {
   title: "Atoms/Spinner",
   component: N8nSpinner,
   argTypes: {
-	size: {
-		control: {
-		  type: "select",
-		  options: ["sm", "md", "lg"],
-		},
-	}
-  }
+    size: {
+      control: {
+        type: "select",
+        options: ["sm", "md", "lg"],
+      },
+    },
+  },
 };
 
 const Template = (args, { argTypes }) => ({

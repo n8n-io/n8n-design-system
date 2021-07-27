@@ -8,16 +8,16 @@ export default {
       control: "text",
     },
     size: {
-	control: {
-	  type: "select",
-	  options: ["sm", "md", "lg"],
-	},
+      control: {
+        type: "select",
+        options: ["sm", "md", "lg"],
+      },
     },
     spin: {
-	control: {
-	  type: "boolean"
-	}
-    }
+      control: {
+        type: "boolean",
+      },
+    },
   },
 };
 

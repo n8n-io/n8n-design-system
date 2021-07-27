@@ -5,10 +5,7 @@ const sass = require("gulp-dart-sass");
 const autoprefixer = require("gulp-autoprefixer");
 const cleanCSS = require("gulp-clean-css");
 
-gulp.task(
-  "build:theme",
-  gulp.series([compileTheme, copyThemeFonts])
-);
+gulp.task("build:theme", gulp.series([compileTheme, copyThemeFonts]));
 
 gulp.task(
   "watch:theme",

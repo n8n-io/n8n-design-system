@@ -18,7 +18,7 @@
 <script lang="ts">
 import Vue from "vue";
 
-export default {
+export default Vue.extend({
   name: "variable-table",
   data() {
     return {
@@ -65,7 +65,7 @@ export default {
       this.observer.disconnect();
     }
   },
-};
+});
 </script>
 
 <style lang="scss" module>

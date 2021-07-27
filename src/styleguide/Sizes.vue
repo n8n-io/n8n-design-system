@@ -20,7 +20,7 @@
 <script lang="ts">
 import Vue from "vue";
 
-export default {
+export default Vue.extend({
   name: "sizes",
   data() {
     return {
@@ -68,7 +68,7 @@ export default {
       this.observer.disconnect();
     }
   },
-};
+});
 </script>
 
 <style lang="scss" module>

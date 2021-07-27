@@ -15,7 +15,7 @@
 <script lang="ts">
 import Vue from "vue";
 
-function hslToHex(h: number, s: number, l: number) {
+function hslToHex(h: number, s: number, l: number): string {
   l /= 100;
   const a = (s * Math.min(l, 1 - l)) / 100;
   const f = (n: number) => {
@@ -28,7 +28,7 @@ function hslToHex(h: number, s: number, l: number) {
   return `#${f(0)}${f(8)}${f(4)}`;
 }
 
-function getHex(hsl: string) {
+function getHex(hsl: string): string {
   const colors = hsl
     .replace("hsl(", "")
     .replace(")", "")
@@ -39,7 +39,7 @@ function getHex(hsl: string) {
   return hslToHex(colors[0], colors[1], colors[2]);
 }
 
-export default {
+export default Vue.extend({
   name: "color-circles",
   data() {
     return {
@@ -87,7 +87,7 @@ export default {
       return getHex(this.hsl[color]);
     },
   },
-};
+});
 </script>
 
 <style lang="scss" module>

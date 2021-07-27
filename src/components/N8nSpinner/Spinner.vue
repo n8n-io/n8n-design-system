@@ -9,12 +9,12 @@
 export default {
   name: "n8n-spinner",
   props: {
-	size: {
-		type: String,
-		validator: function (value) {
-			return ["sm", "md", "lg"].indexOf(value) !== -1;
-		}
-	},
+    size: {
+      type: String,
+      validator: function (value) {
+        return ["sm", "md", "lg"].indexOf(value) !== -1;
+      },
+    },
   },
 };
 </script>

@@ -11,9 +11,13 @@
     :round="!props.circle"
     :circle="props.circle"
   >
-    <span  :class="$style.icon" v-if="props.loading || props.icon">
-	<N8nSpinner v-if="props.loading" :size="props.iconSize" />
-	<N8nIcon v-else-if="props.icon" :icon="props.icon" :size="props.iconSize" />
+    <span :class="$style.icon" v-if="props.loading || props.icon">
+      <N8nSpinner v-if="props.loading" :size="props.iconSize" />
+      <N8nIcon
+        v-else-if="props.icon"
+        :icon="props.icon"
+        :size="props.iconSize"
+      />
     </span>
     <span v-if="props.label">{{ props.label }}</span>
   </el-button>
@@ -29,7 +33,7 @@ Vue.component("ElButton", Button);
 Vue.component("N8nIcon", N8nIcon);
 Vue.component("N8nSpinner", N8nSpinner);
 
-const sizeMap = {
+const sizeMap: {[size: string]: string} = {
   sm: "small",
   md: "medium",
   lg: "",
@@ -47,16 +51,12 @@ export default {
     type: {
       type: String,
       default: "primary",
-      validator: function (value) {
-        return ["primary", "secondary"].indexOf(value) !== -1;
-      },
+      validator: (value: string): boolean => ["primary", "secondary"].indexOf(value) !== -1,
     },
     size: {
       type: String,
       default: "md",
-      validator: function (value) {
-        return ["sm", "md", "lg"].indexOf(value) !== -1;
-      },
+      validator: (value: string): boolean => ["sm", "md", "lg"].indexOf(value) !== -1,
     },
     loading: {
       type: Boolean,
@@ -77,7 +77,7 @@ export default {
       default: false,
     },
   },
-  mapToSize: (size) => sizeMap[size],
+  mapToSize: (size: string): string => sizeMap[size],
 };
 </script>
 
@@ -85,28 +85,27 @@ export default {
 @use "~/theme/src/button.scss";
 </style>
 
-
 <style lang="scss" module>
 .button {
-	> i {
-		display: none;
-	}
+  > i {
+    display: none;
+  }
 
-	> span {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+  > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-	span + span {
-		margin-left: var(--spacing-3xs);
-	}
+  span + span {
+    margin-left: var(--spacing-3xs);
+  }
 }
 .icon {
-	display: inline-flex;
+  display: inline-flex;
 
-	svg {
-		display: block;
-	}
+  svg {
+    display: block;
+  }
 }
 </style>
