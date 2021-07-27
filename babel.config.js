@@ -1,12 +1,3 @@
 module.exports = {
-  presets: ["@vue/cli-plugin-babel/preset"],
-  plugins: [
-    [
-      "component",
-      {
-        libraryName: "element-ui",
-        styleLibraryName: "~theme",
-      },
-    ],
-  ],
+  presets: ["@vue/cli-plugin-babel/preset"]
 };
