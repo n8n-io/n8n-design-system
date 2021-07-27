@@ -12,8 +12,8 @@
     :circle="props.circle"
   >
     <span :class="$style.icon" v-if="props.loading || props.icon">
-      <N8nSpinner v-if="props.loading" :size="props.iconSize" />
-      <N8nIcon
+      <n8n-spinner v-if="props.loading" :size="props.iconSize" />
+      <n8n-icon
         v-else-if="props.icon"
         :icon="props.icon"
         :size="props.iconSize"
@@ -29,9 +29,7 @@ import { Button } from "element-ui";
 import N8nIcon from "../N8nIcon";
 import N8nSpinner from "../N8nSpinner";
 
-Vue.component("ElButton", Button);
-Vue.component("N8nIcon", N8nIcon);
-Vue.component("N8nSpinner", N8nSpinner);
+Vue.component('ElButton', Button);
 
 const sizeMap: {[size: string]: string} = {
   sm: "small",

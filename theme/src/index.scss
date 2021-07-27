@@ -1,4 +1,5 @@
-@use "./tokens";
+@use "./tokens.scss";
+@use "./tokens.dark.scss" as dark;
 @use "./base.scss";
 @use "./pagination.scss";
 @use "./dialog.scss";
