@@ -734,6 +734,10 @@
   content: "\e6ce";
 }
 
+.el-icon-loading:before {
+  content: "\e6cf";
+}
+
 .el-icon-rank:before {
   content: "\e6d1";
 }
@@ -1140,6 +1144,10 @@
 
 .el-icon-platform-eleme:before {
   content: "\e7ca";
+}
+
+.el-icon-loading {
+  animation: rotating 2s linear infinite;
 }
 
 .el-icon--right {
