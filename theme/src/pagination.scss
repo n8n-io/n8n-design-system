@@ -132,7 +132,7 @@
   @include mixins.e(sizes) {
     margin: 0 10px 0 0;
     font-weight: normal;
-    color: var.$color-text-regular;
+    color: var.$color-text-primary;
 
     .el-input .el-input__inner {
       font-size: var.$pagination-font-size;
@@ -147,13 +147,13 @@
   @include mixins.e(total) {
     margin-right: 10px;
     font-weight: normal;
-    color: var.$color-text-regular;
+    color: var.$color-text-primary;
   }
 
   @include mixins.e(jump) {
     margin-left: 24px;
     font-weight: normal;
-    color: var.$color-text-regular;
+    color: var.$color-text-primary;
 
     .el-input__inner {
       padding: 0 3px;
@@ -195,7 +195,7 @@
     .el-pager li {
       margin: 0 5px;
       background-color: var.$color-info-lighter;
-      color: var.$color-text-regular;
+      color: var.$color-text-primary;
       min-width: 30px;
       border-radius: 2px;
 

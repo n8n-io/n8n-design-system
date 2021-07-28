@@ -8,7 +8,7 @@
 
   @include mixins.e(text) {
     font-size:14px;
-    color: var.$color-text-regular;
+    color: var.$color-text-primary;
     display: inline-block;
     vertical-align: middle;
     margin-left: 10px;

@@ -208,7 +208,7 @@
 
   @include mixins.e(btn) {
 	@include button.button-round();
-	@include button.button-primary();
+	@include button.button-just-primary();
   }
 
   @include mixins.e(link-btn) {

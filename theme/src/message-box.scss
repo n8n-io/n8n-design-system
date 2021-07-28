@@ -1,7 +1,8 @@
 @use "mixins/mixins";
+@use "mixins/button";
 @use "./common/var";
 @use "common/popup";
-@use "button";
+@use "button" as buttons;
 @use "input";
 
 @include mixins.b(message-box) {
@@ -146,7 +147,7 @@
     padding: 5px 15px 0;
     text-align: right;
 
-    & button:nth-child(2) {
+    & button {
       margin-left: 10px;
     }
   }

@@ -6,7 +6,7 @@
 @include mixins.b(dropdown) {
   display: inline-block;
   position: relative;
-  color: var.$color-text-regular;
+  color: var.$color-text-primary;
   font-size: var.$font-size-base;
 
   .el-button-group {
@@ -80,7 +80,7 @@
     padding: 0 20px;
     margin: 0;
     font-size: var.$font-size-base;
-    color: var.$color-text-regular;
+    color: var.$color-text-primary;
     cursor: pointer;
     outline: none;
     &:not(.is-disabled):hover, &:focus {

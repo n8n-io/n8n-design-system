@@ -22,7 +22,7 @@
     float: left;
 
     @include mixins.e(inner) {
-      color: var.$color-text-regular;
+      color: var.$color-text-primary;
 
       &.is-link, & a {
         font-weight: bold;
@@ -42,7 +42,7 @@
       .el-breadcrumb__inner a {
         &, &:hover {
           font-weight: normal;
-          color: var.$color-text-regular;
+          color: var.$color-text-primary;
           cursor: text;
         }
       }

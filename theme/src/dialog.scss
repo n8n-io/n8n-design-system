@@ -65,7 +65,7 @@
 
   @include mixins.e(body) {
     padding: (var.$dialog-padding-primary + 10px) var.$dialog-padding-primary;
-    color: var.$color-text-regular;
+    color: var.$color-text-primary;
     font-size: var.$dialog-content-font-size;
     word-break: break-all;
   }

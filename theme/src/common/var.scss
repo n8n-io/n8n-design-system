@@ -145,7 +145,7 @@ $checkbox-font-size: 14px !default;
 /// fontWeight||Font|1
 $checkbox-font-weight: $font-weight-primary !default;
 /// color||Color|0
-$checkbox-font-color: $color-text-regular !default;
+$checkbox-font-color: $color-text-primary !default;
 $checkbox-input-height: 14px !default;
 $checkbox-input-width: 14px !default;
 /// borderRadius||Border|2
@@ -208,7 +208,7 @@ $radio-font-size: $font-size-base !default;
 /// fontWeight||Font|1
 $radio-font-weight: $font-weight-primary !default;
 /// color||Color|0
-$radio-font-color: $color-text-regular !default;
+$radio-font-color: $color-text-primary !default;
 $radio-input-height: 14px !default;
 $radio-input-width: 14px !default;
 /// borderRadius||Border|2
@@ -280,7 +280,7 @@ $select-input-focus-border-color: var(--color-primary) !default;
 /// fontSize||Font|1
 $select-input-font-size: 14px !default;
 
-$select-option-color: $color-text-regular !default;
+$select-option-color: $color-text-primary !default;
 $select-option-disabled-color: $color-text-placeholder !default;
 $select-option-disabled-background: $color-white !default;
 /// height||Other|4
@@ -338,7 +338,7 @@ $messagebox-font-size: $font-size-large !default;
 /// fontSize||Font|1
 $messagebox-content-font-size: $font-size-base !default;
 /// color||Color|0
-$messagebox-content-color: $color-text-regular !default;
+$messagebox-content-color: $color-text-primary !default;
 /// fontSize||Font|1
 $messagebox-error-font-size: 12px !default;
 $msgbox-padding-primary: 15px !default;
@@ -389,7 +389,7 @@ $notification-group-margin-right: 8px !default;
 /// fontSize||Font|1
 $notification-content-font-size: $font-size-base !default;
 /// color||Color|0
-$notification-content-color: $color-text-regular !default;
+$notification-content-color: $color-text-primary !default;
 /// fontSize||Font|1
 $notification-title-font-size: 16px !default;
 /// color||Color|0
@@ -398,7 +398,7 @@ $notification-title-color: $color-text-primary !default;
 /// color||Color|0
 $notification-close-color: $color-text-secondary !default;
 /// color||Color|0
-$notification-close-hover-color: $color-text-regular !default;
+$notification-close-hover-color: $color-text-primary !default;
 
 /// color||Color|0
 $notification-success-icon-color: var(--color-success) !default;
@@ -413,7 +413,7 @@ $notification-danger-icon-color: var(--color-danger) !default;
 -------------------------- */
 $input-font-size: $font-size-base !default;
 /// color||Color|0
-$input-font-color: $color-text-regular !default;
+$input-font-color: $color-text-primary !default;
 /// height||Other|4
 $input-width: 140px !default;
 /// height||Other|4
@@ -460,7 +460,7 @@ $input-mini-height: 28px !default;
 /* Cascader
 -------------------------- */
 /// color||Color|0
-$cascader-menu-font-color: $color-text-regular !default;
+$cascader-menu-font-color: $color-text-primary !default;
 /// color||Color|0
 $cascader-menu-selected-font-color: var(--color-primary) !default;
 $cascader-menu-fill: $fill-base !default;
@@ -487,8 +487,8 @@ $group-title-width: 66px !default;
 $tab-font-size: $font-size-base !default;
 $tab-border-line: 1px solid #e4e4e4 !default;
 $tab-header-color-active: $color-text-secondary !default;
-$tab-header-color-hover: $color-text-regular !default;
-$tab-header-color: $color-text-regular !default;
+$tab-header-color-hover: $color-text-primary !default;
+$tab-header-color: $color-text-primary !default;
 $tab-header-fill-active: rgba($color-black, 0.06) !default;
 $tab-header-fill-hover: rgba($color-black, 0.06) !default;
 $tab-vertical-header-width: 90px !default;
@@ -530,7 +530,7 @@ $button-mini-padding-vertical: 7px !default;
 $button-mini-padding-horizontal: 15px !default;
 
 /// color||Color|0
-$button-default-font-color: $color-text-regular !default;
+$button-default-font-color: $color-text-primary !default;
 /// color||Color|0
 $button-default-background-color: $color-white !default;
 /// color||Color|0
@@ -618,7 +618,7 @@ $dialog-padding-primary: 20px !default;
 $table-border-color: $border-color-lighter !default;
 $table-border: 1px solid $table-border-color !default;
 /// color||Color|0
-$table-font-color: $color-text-regular !default;
+$table-font-color: $color-text-primary !default;
 /// color||Color|0
 $table-header-font-color: $color-text-secondary !default;
 /// color||Color|0
@@ -710,7 +710,7 @@ $tag-padding: 0 10px !default;
 /// color||Color|0
 $tree-node-hover-background-color: $background-color-base !default;
 /// color||Color|0
-$tree-font-color: $color-text-regular !default;
+$tree-font-color: $color-text-primary !default;
 /// color||Color|0
 $tree-expand-icon-color: $color-text-placeholder !default;
 
@@ -787,11 +787,11 @@ $rate-icon-color: $color-text-placeholder !default;
 
 /* DatePicker
 --------------------------*/
-$datepicker-font-color: $color-text-regular !default;
+$datepicker-font-color: $color-text-primary !default;
 /// color|1|Color|0
 $datepicker-off-font-color: $color-text-placeholder !default;
 /// color||Color|0
-$datepicker-header-font-color: $color-text-regular !default;
+$datepicker-header-font-color: $color-text-primary !default;
 $datepicker-icon-color: $color-text-primary !default;
 $datepicker-border-color: $disabled-border-base !default;
 $datepicker-inner-border-color: #e4e4e4 !default;
@@ -904,7 +904,7 @@ $link-font-size: $font-size-base !default;
 /// fontWeight||Font|1
 $link-font-weight: $font-weight-primary !default;
 /// color||Color|0
-$link-default-font-color: $color-text-regular !default;
+$link-default-font-color: $color-text-primary !default;
 /// color||Color|0
 $link-default-active-color: var(--color-primary) !default;
 /// color||Color|0

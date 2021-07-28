@@ -1,8 +1,9 @@
 @use "../common/var";
 @use "../mixins/mixins";
+@use "../mixins/button";
 
 @include mixins.b(picker-panel) {
-  color: var.$color-text-regular;
+  color: var.$color-text-primary;
   border: 1px solid var.$datepicker-border-color;
   box-shadow: var.$box-shadow-light;
   background: var.$color-white;
@@ -95,7 +96,16 @@
   }
 
   @include mixins.e(link-btn) {
+    @include button.button-round();
+    @include button.button-outline();
+    @include button.button-small();
+
     vertical-align: middle;
+    margin-left: var(--spacing-2xs);
+
+    &.is-plain {
+    	@include button.button-just-primary();
+    }
   }
 }
 

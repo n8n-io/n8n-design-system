@@ -74,10 +74,9 @@
   }
 }
 
-@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $border-radius) {
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size) {
   padding: $padding-vertical $padding-horizontal;
   font-size: $font-size;
-  border-radius: $border-radius;
 
   &.is-round {
     padding: $padding-vertical $padding-horizontal;
@@ -88,7 +87,8 @@
 	border-radius: var(--button-radius-round);
 }
 
-@mixin button-primary() {
+// ignore plain overrides
+@mixin button-just-primary() {
 	@include button-variant(
 		var.$button-primary-font-color,
 		var.$button-primary-background-color,
@@ -110,6 +110,13 @@
 		var(--spacing-3xs),
 		var(--spacing-xs),
 		var(--font-size-2xs),
-		var.$button-mini-border-radius
 	);
+}
+
+@mixin button-medium() {
+    @include button-size(
+	var(--spacing-2xs),
+	var(--spacing-xs),
+      	var(--font-size-2xs),
+    );
 }
