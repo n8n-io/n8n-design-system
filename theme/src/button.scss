@@ -19,7 +19,7 @@
   outline: none;
   margin: 0;
   transition: 0.1s;
-  font-weight: var(--font-weight-semi-bold);
+  font-weight: var(--font-weight-bold);
   @include utils.utils-user-select(none);
 
   @include button.button-size(
@@ -140,6 +140,7 @@
       --color-info-tint-1-l
     );
   }
+
   @include mixins.m(medium) {
     @include button.button-size(
 	var(--spacing-2xs),
@@ -151,28 +152,23 @@
       padding: var(--spacing-2xs);
     }
   }
+
   @include mixins.m(small) {
-    @include button.button-size(
-      var(--spacing-3xs),
-      var(--spacing-xs),
-      var(--font-size-2xs),
-      var.$button-small-border-radius
-    );
+    @include button.button-small();
+
     @include mixins.when(circle) {
       padding: var(--spacing-3xs);
     }
   }
+
   @include mixins.m(mini) {
-    @include button.button-size(
-      var.$button-mini-padding-vertical,
-      var.$button-mini-padding-horizontal,
-      var.$button-mini-font-size,
-      var.$button-mini-border-radius
-    );
+    @include button.button-small();
+
     @include mixins.when(circle) {
       padding: var(--spacing-4xs);
     }
   }
+
   @include mixins.m(text) {
     border-color: transparent;
     color: var(--color-primary);
@@ -180,8 +176,7 @@
     padding-left: 0;
     padding-right: 0;
 
-    &:hover,
-    &:focus {
+    &:hover {
       border-color: transparent;
       background-color: transparent;
     }

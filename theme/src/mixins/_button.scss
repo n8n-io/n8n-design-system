@@ -3,11 +3,18 @@
 
 @mixin button-plain($color, $h, $s, $l) {
   color: hsl(var(#{$h}), var(#{$s}), var(#{$l}));
-  background: unset;
+  background-color: var(--color-foreground-xlight);
   border-color: function.lightness($h, $s, $l, var.$button-hover-tint-percent);
+
+  &:hover {
+	color: hsl(var(#{$h}), var(#{$s}), var(#{$l}));
+	background-color: var(--color-foreground-xlight);
+	border-color: function.lightness($h, $s, $l, var.$button-hover-tint-percent);
+  }
 
   &:active {
     border-color: function.lightness($h, $s, $l, -(var.$button-active-shade-percent));
+    background-color: var(--color-foreground-xlight);
     color: function.lightness($h, $s, $l, -(var.$button-active-shade-percent));
     outline: none;
   }
@@ -18,13 +25,14 @@
     &:focus,
     &:active {
       color: var(--color-text-light);;
-      background-color: unset;
+      background-color: var(--color-foreground-xlight);
       border-color: var(--color-foreground-base);
     }
   }
 }
 
-@mixin button-variant($color, $background-color, $border-color, $h, $s, $l, $t) {
+
+@mixin button-variant($color, $background-color, $border-color, $h, $s, $l, $t, $plain: true) {
   color: $color;
   background-color: hsl(var(#{$h}), var(#{$s}), var(#{$l}));
   border-color: hsl(var(#{$h}), var(#{$s}), var(#{$l}));
@@ -59,8 +67,10 @@
     }
   }
 
-  &.is-plain {
-    @include button-plain($background-color, $h, $s, $l,);
+  @if $plain {
+	&.is-plain {
+		@include button-plain($background-color, $h, $s, $l,);
+	}
   }
 }
 
@@ -72,4 +82,34 @@
   &.is-round {
     padding: $padding-vertical $padding-horizontal;
   }
+}
+
+@mixin button-round() {
+	border-radius: var(--button-radius-round);
+}
+
+@mixin button-primary() {
+	@include button-variant(
+		var.$button-primary-font-color,
+		var.$button-primary-background-color,
+		var.$button-primary-border-color,
+		--color-primary-h,
+		--color-primary-s,
+		--color-primary-l,
+		--color-primary-tint-2-l,
+		$plain: false
+	);
+}
+
+@mixin button-outline() {
+	@include button-plain(var.$button-primary-background-color, --color-primary-h, --color-primary-s, --color-primary-l,);
+}
+
+@mixin button-small() {
+	@include button-size(
+		var(--spacing-3xs),
+		var(--spacing-xs),
+		var(--font-size-2xs),
+		var.$button-mini-border-radius
+	);
 }

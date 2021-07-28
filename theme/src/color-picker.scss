@@ -1,4 +1,5 @@
 @use "mixins/mixins";
+@use "mixins/button";
 @use "./common/var";
 
 @include mixins.b(color-predefine) {
@@ -206,35 +207,16 @@
   }
 
   @include mixins.e(btn) {
-    border: 1px solid #dcdcdc;
-    color: #333;
-    line-height: 24px;
-    border-radius: 2px;
-    padding: 0 20px;
-    cursor: pointer;
-    background-color: transparent;
-    outline: none;
-    font-size: 12px;
-
-    &[disabled] {
-      color: #cccccc;
-      cursor: not-allowed;
-    }
-    &:hover {
-      color: var(--color-primary);
-      border-color: var(--color-primary);
-    }
+	@include button.button-round();
+	@include button.button-primary();
   }
 
   @include mixins.e(link-btn) {
-    cursor: pointer;
-    color: var(--color-primary);
-    text-decoration: none;
-    padding: 15px;
-    font-size: 12px;
-    &:hover {
-      color: tint(var(--color-primary), var.$button-hover-tint-percent);
-    }
+	@include button.button-outline();
+	@include button.button-small();
+	@include button.button-round();
+
+	margin-right: var(--spacing-2xs);
   }
 }
 
