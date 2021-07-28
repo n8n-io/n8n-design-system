@@ -1,7 +1,7 @@
 import { N8nComponent, N8nComponentSize } from '../component'
 
 /** Button type */
-export type ButtonType = 'primary' | 'secondary'
+export type ButtonType = 'primary' | 'outline' | 'light'
 
 /** Button Component */
 export declare class N8nButton extends N8nComponent {
@@ -32,6 +32,6 @@ export declare class N8nButton extends N8nComponent {
   /** Size of icon */
   iconSize: N8nComponentSize
 
-  /** Ful width */
+  /** Full width */
   fullWidth: boolean;
 }

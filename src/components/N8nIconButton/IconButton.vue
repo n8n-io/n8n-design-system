@@ -1,15 +1,16 @@
 <template functional>
   <n8n-button
-    type="primary"
+    :type="props.type"
     :disabled="props.disabled"
-    :size="props.size"
+    :size="props.size === 'xl' ? 'lg' : props.size"
     :loading="props.loading"
     :title="props.title"
     :icon="props.icon"
-    :iconSize="props.size"
-    @click="listeners.click"
+    :iconSize="props.iconSize || props.size"
+    :theme="props.theme"
+    @click="(e) => listeners.click && listeners.click(e)"
     circle
-  ></n8n-button>
+  />
 </template>
 
 <script lang="ts">
@@ -21,6 +22,9 @@ Vue.component("N8nButton", N8nButton);
 export default {
   name: "n8n-icon-button",
   props: {
+    type: {
+      type: String
+    },
     title: {
       type: String,
     },
@@ -39,6 +43,9 @@ export default {
       type: String,
       required: true,
     },
+    theme: {
+      type: String,
+    }
   },
 };
 </script>

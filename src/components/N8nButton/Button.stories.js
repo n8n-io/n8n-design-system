@@ -13,7 +13,7 @@ export default {
     },
     type: {
       control: "select",
-      options: ["primary", "secondary"],
+      options: ["primary", "outline", 'light'],
     },
     size: {
       control: {
@@ -34,7 +34,7 @@ export default {
     iconSize: {
       control: {
         type: "select",
-        options: ["sm", "md", "lg"],
+        options: ["sm", "md", "lg", "xl"],
       },
     },
     circle: {
@@ -44,7 +44,11 @@ export default {
     },
     fullWidth: {
 	type: "boolean"
-    }
+    },
+    theme: {
+	type: "select",
+	options: ["success", "danger", "warning"],
+    },
   },
   parameters: {
     design: {
@@ -88,9 +92,15 @@ Primary.args = {
   label: "Button",
 };
 
-export const Secondary = ManyTemplate.bind({});
-Secondary.args = {
-  type: "secondary",
+export const Outline = ManyTemplate.bind({});
+Outline.args = {
+  type: "outline",
+  label: "Button",
+};
+
+export const Light = ManyTemplate.bind({});
+Light.args = {
+  type: "light",
   label: "Button",
 };
 

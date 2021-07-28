@@ -24,7 +24,7 @@
   }
 }
 
-@mixin button-variant($color, $background-color, $border-color, $h, $s, $l) {
+@mixin button-variant($color, $background-color, $border-color, $h, $s, $l, $t) {
   color: $color;
   background-color: hsl(var(#{$h}), var(#{$s}), var(#{$l}));
   border-color: hsl(var(#{$h}), var(#{$s}), var(#{$l}));
@@ -40,6 +40,12 @@
     background: function.lightness($h, $s, $l, -(var.$button-active-shade-percent));
     border-color: function.lightness($h, $s, $l, -(var.$button-active-shade-percent));
     color: $color;
+  }
+
+  &.is-light {
+	color: hsl(var(#{$h}), var(#{$s}), var(#{$l}));;
+	background-color:  hsl(var(#{$h}), var(#{$s}), var(#{$t}));
+	border-color:  hsl(var(#{$h}), var(#{$s}), var(#{$t}));
   }
 
   &.is-disabled {

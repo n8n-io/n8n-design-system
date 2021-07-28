@@ -12,7 +12,7 @@ export default {
     size: {
       type: String,
       validator: function (value) {
-        return ["sm", "md", "lg"].indexOf(value) !== -1;
+        return ["sm", "md", "lg", "xl"].indexOf(value) !== -1;
       },
     },
   },

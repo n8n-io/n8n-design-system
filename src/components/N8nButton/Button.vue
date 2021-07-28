@@ -1,15 +1,15 @@
 <template functional>
   <el-button
-    type="primary"
-    :plain="props.type === 'secondary'"
+    :type="props.theme ? props.theme : 'primary'"
+    :plain="props.type === 'outline'"
     :disabled="props.disabled"
     :size="$options.mapToSize(props.size)"
     :loading="props.loading"
-    :title="props.title"
-    :class="props.fullWidth ? $style.fullWidth : $style.button"
-    @click="listeners.click"
+    :title="props.title ? props.title : props.label"
+    :class="(props.fullWidth ? $style.fullWidth : $style.button) + (props.type === 'light'? ' is-light' : '')"
     :round="!props.circle"
     :circle="props.circle"
+    @click="listeners.click"
   >
     <span :class="$style.icon" v-if="props.loading || props.icon">
       <n8n-spinner v-if="props.loading" :size="props.iconSize" />
@@ -37,6 +37,7 @@ const sizeMap: {[size: string]: string} = {
   sm: "small",
   md: "medium",
   lg: "",
+  xl: "",
 };
 
 export default {
@@ -51,7 +52,7 @@ export default {
     type: {
       type: String,
       default: "primary",
-      validator: (value: string): boolean => ["primary", "secondary"].indexOf(value) !== -1,
+      validator: (value: string): boolean => ["primary", "outline", 'light'].indexOf(value) !== -1,
     },
     size: {
       type: String,
@@ -79,6 +80,10 @@ export default {
     fullWidth: {
       type: Boolean,
       default: false,
+    },
+    theme: {
+      	type: String,
+        validator: (value: string): boolean => ["success", "warning", "danger"].indexOf(value) !== -1,
     },
   },
   mapToSize: (size: string): string => sizeMap[size],

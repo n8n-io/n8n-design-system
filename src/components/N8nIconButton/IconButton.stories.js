@@ -5,13 +5,17 @@ export default {
   title: "Atoms/Icon Button",
   component: N8nIconButton,
   argTypes: {
+    type: {
+	control: 'select',
+	options: ['primary', 'outline', 'light']
+    },
     title: {
       control: "text",
     },
     size: {
       control: {
         type: "select",
-        options: ["sm", "md", "lg"],
+        options: ["sm", "md", "lg", "xl"],
       },
     },
     loading: {
@@ -23,6 +27,12 @@ export default {
       control: {
         type: "text",
       },
+    },
+    theme: {
+	control: {
+		type: "select",
+		options: ['success', 'warning', 'danger'],
+	}
     },
   },
   parameters: {
@@ -55,7 +65,7 @@ const ManyTemplate = (args, { argTypes }) => ({
     N8nIconButton,
   },
   template:
-    '<div> <n8n-icon-button v-bind="$props" size="lg" @click="onClick" />  <n8n-icon-button v-bind="$props" size="md" @click="onClick" />  <n8n-icon-button v-bind="$props" size="sm" @click="onClick" />  <n8n-icon-button v-bind="$props" :loading="true" @click="onClick" />  <n8n-icon-button v-bind="$props" :disabled="true" @click="onClick" /></div>',
+    '<div> <n8n-icon-button v-bind="$props" size="xl" @click="onClick" /> <n8n-icon-button v-bind="$props" size="lg" @click="onClick" />  <n8n-icon-button v-bind="$props" size="md" @click="onClick" />  <n8n-icon-button v-bind="$props" size="sm" @click="onClick" />  <n8n-icon-button v-bind="$props" :loading="true" @click="onClick" />  <n8n-icon-button v-bind="$props" :disabled="true" @click="onClick" /></div>',
   methods,
 });
 
@@ -65,3 +75,18 @@ Primary.args = {
   title: "my title",
   type: "primary",
 };
+
+export const Outline = ManyTemplate.bind({});
+Outline.args = {
+  icon: "plus",
+  title: "my title",
+  type: "outline",
+};
+
+export const Light = ManyTemplate.bind({});
+Light.args = {
+  icon: "plus",
+  title: "my title",
+  type: "light",
+};
+

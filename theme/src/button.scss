@@ -92,7 +92,8 @@
       var.$button-primary-border-color,
       --color-primary-h,
       --color-primary-s,
-      --color-primary-l
+      --color-primary-l,
+      --color-primary-tint-2-l
     );
   }
   @include mixins.m(success) {
@@ -102,7 +103,8 @@
       var.$button-success-border-color,
       --color-success-h,
       --color-success-s,
-      --color-success-l
+      --color-success-l,
+      --color-success-tint-1-l
     );
   }
   @include mixins.m(warning) {
@@ -112,7 +114,8 @@
       var.$button-warning-border-color,
       --color-warning-h,
       --color-warning-s,
-      --color-warning-l
+      --color-warning-l,
+      --color-warning-tint-1-l
     );
   }
   @include mixins.m(danger) {
@@ -122,7 +125,8 @@
       var.$button-danger-border-color,
       --color-danger-h,
       --color-danger-s,
-      --color-danger-l
+      --color-danger-l,
+      --color-danger-tint-1-l
     );
   }
   @include mixins.m(info) {
@@ -132,7 +136,8 @@
       var.$button-info-border-color,
       --color-info-h,
       --color-info-s,
-      --color-info-l
+      --color-info-l,
+      --color-info-tint-1-l
     );
   }
   @include mixins.m(medium) {
