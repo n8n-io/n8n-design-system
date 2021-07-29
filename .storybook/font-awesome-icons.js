@@ -165,5 +165,3 @@ library.add(faTrash);
 library.add(faUndo);
 library.add(faUsers);
 library.add(faClock);
-
-Vue.component('font-awesome-icon', FontAwesomeIcon);

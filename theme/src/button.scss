@@ -195,14 +195,6 @@
       border-color: transparent;
     }
   }
-
-  &.force-outline {
-	@include button.button-outline();
-  }
-
-  &.force-medium {
-	@include button.button-medium();
-  }
 }
 
 @include mixins.b(button-group) {

@@ -1,13 +1,16 @@
 <template functional>
-  <n8n-icon icon="spinner" :size="props.size" spin />
+  <component :is="$options.components.N8nIcon"
+   icon="spinner" :size="props.size" spin />
 </template>
 
 <script>
-// import N8nIcon from "../N8nIcon";
-// Vue.component("N8nIcon", N8nIcon);
+import N8nIcon from "../N8nIcon";
 
 export default {
   name: "n8n-spinner",
+  components: {
+	  N8nIcon,
+  },
   props: {
     size: {
       type: String,
