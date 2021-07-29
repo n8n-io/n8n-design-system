@@ -98,7 +98,7 @@ export default {
 		styles.float = props.float;
 	}
 	if (props.fullWidth) {
-		styles.fullWidth = true;
+		styles.width = '100%';
 	}
 	return styles;
   }
