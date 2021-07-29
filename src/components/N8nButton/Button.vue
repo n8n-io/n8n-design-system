@@ -9,6 +9,7 @@
     :class="(props.fullWidth ? $style.fullWidth : $style.button) + (props.type === 'light'? ' is-light' : '')"
     :round="!props.circle"
     :circle="props.circle"
+    :style="$options.styles(props)"
     @click="listeners.click"
   >
     <span :class="$style.icon" v-if="props.loading || props.icon">
@@ -83,10 +84,15 @@ export default {
     },
     theme: {
       	type: String,
-        validator: (value: string): boolean => ["success", "warning", "danger"].indexOf(value) !== -1,
+        validator: (value: string): boolean => ["success", "warning", "danger", "info"].indexOf(value) !== -1,
     },
+    float: {
+	type: String,
+        validator: (value: string): boolean => ["left", "right"].indexOf(value) !== -1,
+    }
   },
   mapToSize: (size: string): string => sizeMap[size],
+  styles: (props: any): any => props.float? {float: props.float} :{},
 };
 </script>
 
