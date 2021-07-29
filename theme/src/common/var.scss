@@ -35,24 +35,23 @@ $color-success-light-1: function.lightness(--color-success-h, --color-success-s,
 $color-success-light-3: function.lightness(--color-success-h, --color-success-s, --color-success-l, 12%) !default;
 $color-success-light-5: function.lightness(--color-success-h, --color-success-s, --color-success-l, 20%) !default;
 $color-success-light: function.lightness(--color-success-h, --color-success-s, --color-success-l, 41%) !default;
+$color-success-lighter: function.lightness(--color-success-h, --color-success-s, --color-success-l, 48%) !default;
 
 $color-warning-light-1: function.lightness(--color-warning-h, --color-warning-s, --color-warning-l, 4%) !default;
 $color-warning-light-3: function.lightness(--color-warning-h, --color-warning-s, --color-warning-l, 12%) !default;
 $color-warning-light-5: function.lightness(--color-warning-h, --color-warning-s, --color-warning-l, 20%) !default;
 $color-warning-light: function.lightness(--color-warning-h, --color-warning-s, --color-warning-l, 34%) !default;
+$color-warning-lighter: function.lightness(--color-warning-h, --color-warning-s, --color-warning-l, 40%) !default;
 
 $color-danger-light-1: function.lightness(--color-danger-h, --color-danger-s, --color-danger-l, 4%) !default;
 $color-danger-light-3: function.lightness(--color-danger-h, --color-danger-s, --color-danger-l, 12%) !default;
 $color-danger-light-5: function.lightness(--color-danger-h, --color-danger-s, --color-danger-l, 20%) !default;
 $color-danger-light: function.lightness(--color-danger-h, --color-danger-s, --color-danger-l, 24%) !default;
+$color-danger-lighter: var(--color-danger-tint-2);
 
 $color-info-light-1: function.lightness(--color-info-h, --color-info-s, --color-info-l, 4%) !default;
 $color-info-light-3: function.lightness(--color-info-h, --color-info-s, --color-info-l, 12%) !default;
 $color-info-light-5: function.lightness(--color-info-h, --color-info-s, --color-info-l, 20%) !default;
-
-$color-success-lighter: function.lightness(--color-success-h, --color-success-s, --color-success-l, 48%) !default;
-$color-warning-lighter: function.lightness(--color-warning-h, --color-warning-s, --color-warning-l, 40%) !default;
-$color-danger-lighter: function.lightness(--color-danger-h, --color-danger-s, --color-danger-l, 28%) !default;
 $color-info-lighter: function.lightness(--color-info-h, --color-info-s, --color-info-l, 39%) !default;
 
 /// color|1|Font Color|2
