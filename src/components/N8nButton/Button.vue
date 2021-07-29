@@ -93,14 +93,10 @@ export default {
   },
   mapToSize: (size: string): string => sizeMap[size],
   styles: (props: any): any => {
-	const styles = {};
-	if (props.float) {
-		styles.float = props.float;
-	}
-	if (props.fullWidth) {
-		styles.width = '100%';
-	}
-	return styles;
+	return {
+		...(props.float? {float: props.float} : {}),
+		...(props.fullWidth? {width: '100%'} : {}),
+	};
   }
 };
 </script>
