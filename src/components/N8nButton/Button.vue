@@ -26,9 +26,10 @@
 </template>
 
 <script lang="ts">
-import { Button as ElButton } from "element-ui";
 import N8nIcon from "../N8nIcon";
 import N8nSpinner from "../N8nSpinner";
+// @ts-ignore
+import ElButton from "element-ui/packages/button";
 
 const sizeMap: {[size: string]: string} = {
   sm: "small",
