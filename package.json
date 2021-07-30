@@ -4,14 +4,16 @@
   "private": true,
   "main": "src/main.js",
   "scripts": {
-    "build": "vue-cli-service build --target lib ./src/main.js --report",
-    "build-storybook": "build-storybook",
+    "build": "vue-cli-service build --target lib ./src/main.js",
+    "build:report": "vue-cli-service build --target lib ./src/main.js --report",
+    "build:storybook": "build-storybook",
     "storybook": "start-storybook -p 6006",
     "build:tokens": "gulp build:tokens",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "build:theme": "gulp build:theme",
-    "watch:theme": "gulp watch:theme"
+    "watch:theme": "gulp watch:theme",
+    "prepare": "gulp build:theme; npm run build"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
