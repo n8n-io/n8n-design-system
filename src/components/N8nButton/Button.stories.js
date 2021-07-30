@@ -13,7 +13,7 @@ export default {
     },
     type: {
       control: "select",
-      options: ["primary", "outline", 'light'],
+      options: ["primary", "outline", "light"],
     },
     size: {
       control: {
@@ -43,16 +43,16 @@ export default {
       },
     },
     fullWidth: {
-	type: "boolean"
+      type: "boolean",
     },
     theme: {
-	type: "select",
-	options: ["success", "danger", "warning", "info"],
+      type: "select",
+      options: ["success", "danger", "warning", "info"],
     },
     float: {
-	type: "select",
-	options: ["left", "right"]
-    }
+      type: "select",
+      options: ["left", "right"],
+    },
   },
   parameters: {
     design: {

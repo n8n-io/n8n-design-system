@@ -6,8 +6,8 @@ export default {
   component: N8nIconButton,
   argTypes: {
     type: {
-	control: 'select',
-	options: ['primary', 'outline', 'light']
+      control: "select",
+      options: ["primary", "outline", "light"],
     },
     title: {
       control: "text",
@@ -29,10 +29,10 @@ export default {
       },
     },
     theme: {
-	control: {
-		type: "select",
-		options: ['success', 'warning', 'danger'],
-	}
+      control: {
+        type: "select",
+        options: ["success", "warning", "danger"],
+      },
     },
   },
   parameters: {
@@ -89,4 +89,3 @@ Light.args = {
   title: "my title",
   type: "light",
 };
-

@@ -23,7 +23,7 @@ export default {
   name: "n8n-icon-button",
   props: {
     type: {
-      type: String
+      type: String,
     },
     title: {
       type: String,
@@ -45,7 +45,7 @@ export default {
     },
     theme: {
       type: String,
-    }
+    },
   },
 };
 </script>

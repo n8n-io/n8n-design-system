@@ -1,21 +1,26 @@
 <template functional>
-  <component :is="$options.components.ElButton"
+  <component
+    :is="$options.components.ElButton"
     :type="props.theme || 'primary'"
     :plain="props.type === 'outline'"
     :disabled="props.disabled"
     :size="$options.mapToSize(props.size)"
     :loading="props.loading"
     :title="props.title || props.label"
-    :class="$style.button + (props.type === 'light'? ' is-light' : '')"
+    :class="$style.button + (props.type === 'light' ? ' is-light' : '')"
     :round="!props.circle"
     :circle="props.circle"
     :style="$options.styles(props)"
     @click="listeners.click"
   >
     <span :class="$style.icon" v-if="props.loading || props.icon">
-      <component :is="$options.components.N8nSpinner"
-      		v-if="props.loading" :size="props.iconSize" />
-      <component :is="$options.components.N8nIcon"
+      <component
+        :is="$options.components.N8nSpinner"
+        v-if="props.loading"
+        :size="props.iconSize"
+      />
+      <component
+        :is="$options.components.N8nIcon"
         v-else-if="props.icon"
         :icon="props.icon"
         :size="props.iconSize"
@@ -31,7 +36,7 @@ import N8nSpinner from "../N8nSpinner";
 // @ts-ignore
 import ElButton from "element-ui/packages/button";
 
-const sizeMap: {[size: string]: string} = {
+const sizeMap: { [size: string]: string } = {
   sm: "small",
   md: "medium",
   lg: "",
@@ -49,16 +54,19 @@ export default {
     type: {
       type: String,
       default: "primary",
-      validator: (value: string): boolean => ["primary", "outline", 'light'].indexOf(value) !== -1,
+      validator: (value: string): boolean =>
+        ["primary", "outline", "light"].indexOf(value) !== -1,
     },
     theme: {
-      	type: String,
-        validator: (value: string): boolean => ["success", "warning", "danger", "info"].indexOf(value) !== -1,
+      type: String,
+      validator: (value: string): boolean =>
+        ["success", "warning", "danger", "info"].indexOf(value) !== -1,
     },
     size: {
       type: String,
       default: "md",
-      validator: (value: string): boolean => ["sm", "md", "lg"].indexOf(value) !== -1,
+      validator: (value: string): boolean =>
+        ["sm", "md", "lg"].indexOf(value) !== -1,
     },
     loading: {
       type: Boolean,
@@ -79,26 +87,27 @@ export default {
       default: false,
     },
     float: {
-	type: String,
-        validator: (value: string): boolean => ["left", "right"].indexOf(value) !== -1,
+      type: String,
+      validator: (value: string): boolean =>
+        ["left", "right"].indexOf(value) !== -1,
     },
     fullWidth: {
       type: Boolean,
       default: false,
-    }
+    },
   },
   components: {
-	ElButton,
-	N8nSpinner,
-	N8nIcon,
+    ElButton,
+    N8nSpinner,
+    N8nIcon,
   },
   mapToSize: (size: string): string => sizeMap[size],
   styles: (props: any): any => {
-	return {
-		...(props.float? {float: props.float} : {}),
-		...(props.fullWidth? {width: '100%'} : {}),
-	};
-  }
+    return {
+      ...(props.float ? { float: props.float } : {}),
+      ...(props.fullWidth ? { width: "100%" } : {}),
+    };
+  },
 };
 </script>
 

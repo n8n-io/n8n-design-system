@@ -1,5 +1,6 @@
 <template functional>
-  <component :is="$options.components.FontAwesomeIcon"
+  <component
+    :is="$options.components.FontAwesomeIcon"
     :class="$style[`_${props.size}`]"
     :icon="props.icon"
     :spin="props.spin"
@@ -7,12 +8,12 @@
 </template>
 
 <script>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 export default {
   name: "n8n-icon",
   components: {
-	FontAwesomeIcon,
+    FontAwesomeIcon,
   },
   props: {
     icon: {
@@ -56,6 +57,6 @@ export default {
 ._xl {
   font-size: 1.22em;
   height: 1.22em;
-  width: 1.22em !important
+  width: 1.22em !important;
 }
 </style>
