@@ -102,7 +102,7 @@ export default {
     N8nIcon,
   },
   mapToSize: (size: string): string => sizeMap[size],
-  styles: (props: any): any => {
+  styles: (props: {fullWidth?: boolean, float?: string}): {float?: string, width?: string} => {
     return {
       ...(props.float ? { float: props.float } : {}),
       ...(props.fullWidth ? { width: "100%" } : {}),
