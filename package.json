@@ -4,8 +4,7 @@
   "private": true,
   "main": "src/main.js",
   "scripts": {
-    "build": "vue-cli-service build --target lib ./src/main.js",
-    "build:report": "vue-cli-service build --target lib ./src/main.js --report",
+    "build": "vue-cli-service build --target lib ./src/main.js --report",
     "build:storybook": "build-storybook",
     "storybook": "start-storybook -p 6006",
     "build:tokens": "gulp build:tokens",
@@ -14,6 +13,13 @@
     "build:theme": "gulp build:theme",
     "watch:theme": "gulp watch:theme",
     "prepare": "gulp build:theme; npm run build"
+  },
+  "peerDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/vue-fontawesome": "^2.0.2",
+    "core-js": "^3.6.5",
+    "element-ui": "~2.13.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
@@ -26,10 +32,10 @@
     "vue-class-component": "^7.2.3",
     "vue-property-decorator": "^9.1.2",
     "@babel/core": "^7.14.6",
-    "@storybook/addon-actions": "^6.3.4",
-    "@storybook/addon-essentials": "^6.3.4",
-    "@storybook/addon-links": "^6.3.4",
-    "@storybook/vue": "^6.3.4",
+    "@storybook/addon-actions": "^6.3.6",
+    "@storybook/addon-essentials": "^6.3.6",
+    "@storybook/addon-links": "^6.3.6",
+    "@storybook/vue": "^6.3.6",
     "@types/jest": "^24.0.19",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",

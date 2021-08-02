@@ -1,8 +1,7 @@
-@use './tokens';
-@use "~/theme/src/common/reset.scss";
-@use "~/theme/src/_tokens.scss" as default-theme;
-@use "~/theme/src/_tokens.dark.scss" as dark-theme;
+// @use "~/theme/src/common/reset.scss";
 
 @use "~/theme/src/base.scss" with (
 	$font-path: '~element-ui/lib/theme-chalk/fonts',
 );
+
+@use "~/theme/src/index.scss"

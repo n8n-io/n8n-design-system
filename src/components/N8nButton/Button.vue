@@ -111,10 +111,6 @@ export default {
 };
 </script>
 
-<style lang="scss">
-@use "~/theme/src/button.scss";
-</style>
-
 <style lang="scss" module>
 .button {
   > i {
