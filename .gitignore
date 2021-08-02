@@ -24,4 +24,5 @@ pnpm-debug.log*
 *.sw?
 
 theme/dist/*
+!theme/dist/fonts
 !theme/dist/index.css
