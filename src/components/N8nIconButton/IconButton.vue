@@ -6,7 +6,7 @@
     :loading="props.loading"
     :title="props.title"
     :icon="props.icon"
-    :iconSize="props.size"
+    :iconSize="props.iconSize || props.size"
     :theme="props.theme"
     @click="(e) => listeners.click && listeners.click(e)"
     circle
@@ -42,6 +42,9 @@ export default {
     icon: {
       type: String,
       required: true,
+    },
+    iconSize: {
+      type: String
     },
     theme: {
       type: String,

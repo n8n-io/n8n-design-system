@@ -18,6 +18,12 @@ export default {
         options: ["sm", "md", "lg"],
       },
     },
+    iconSize: {
+	control: {
+	  type: "select",
+	  options: ["sm", "md", "lg"],
+	},
+    },
     loading: {
       control: {
         type: "boolean",

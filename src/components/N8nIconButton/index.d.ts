@@ -8,6 +8,9 @@ export declare class N8nIconButton extends N8nComponent {
   /** Button size */
   size: N8nComponentSize;
 
+  /** icon size */
+  iconSize: N8nComponentSize;
+
   /** Determine whether it's loading */
   loading: boolean;
 
