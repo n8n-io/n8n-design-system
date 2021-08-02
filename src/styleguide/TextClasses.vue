@@ -13,7 +13,7 @@
 <script lang="ts">
 export default {
   name: "text-classes",
-  data() {
+  data(): { observer: null | MutationObserver; classes: string[] } {
     return {
       observer: null as null | MutationObserver,
       classes: [

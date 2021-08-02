@@ -33,7 +33,6 @@
 <script lang="ts">
 import N8nIcon from "../N8nIcon";
 import N8nSpinner from "../N8nSpinner";
-// @ts-ignore
 import ElButton from "element-ui/packages/button";
 
 const sizeMap: { [size: string]: string } = {
@@ -102,7 +101,10 @@ export default {
     N8nIcon,
   },
   mapToSize: (size: string): string => sizeMap[size],
-  styles: (props: {fullWidth?: boolean, float?: string}): {float?: string, width?: string} => {
+  styles: (props: {
+    fullWidth?: boolean;
+    float?: string;
+  }): { float?: string; width?: string } => {
     return {
       ...(props.float ? { float: props.float } : {}),
       ...(props.fullWidth ? { width: "100%" } : {}),

@@ -7,7 +7,7 @@
   />
 </template>
 
-<script>
+<script lang="ts">
 import N8nIcon from "../N8nIcon";
 
 export default {
@@ -18,7 +18,7 @@ export default {
   props: {
     size: {
       type: String,
-      validator: function (value) {
+      validator: function (value: string): boolean {
         return ["sm", "md", "lg", "xl"].indexOf(value) !== -1;
       },
     },

@@ -2,7 +2,17 @@
   "name": "n8n-design-system",
   "version": "0.1.0",
   "private": true,
+  "license": "SEE LICENSE IN LICENSE.md",
+  "homepage": "https://n8n.io",
+  "author": {
+    "name": "Mutasem Aldmour",
+    "email": "mutasem@n8n.io"
+  },
   "main": "src/main.js",
+  "repository": {
+	"type": "git",
+	"url": "git+https://github.com/n8n-io/n8n-design-system.git"
+  },
   "scripts": {
     "build": "vue-cli-service build --target lib ./src/main.js --report",
     "build:storybook": "build-storybook",

@@ -7,7 +7,7 @@
   />
 </template>
 
-<script>
+<script lang="ts">
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 export default {
@@ -23,7 +23,7 @@ export default {
     size: {
       type: String,
       default: "md",
-      validator: function (value) {
+      validator: function (value: string): boolean {
         return ["sm", "md", "lg", "xl"].indexOf(value) !== -1;
       },
     },
