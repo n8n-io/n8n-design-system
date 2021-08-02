@@ -10,14 +10,13 @@
   },
   "main": "src/main.js",
   "repository": {
-	"type": "git",
-	"url": "git+https://github.com/n8n-io/n8n-design-system.git"
+    "type": "git",
+    "url": "git+https://github.com/n8n-io/n8n-design-system.git"
   },
   "scripts": {
     "build": "vue-cli-service build --target lib ./src/main.js --report",
     "build:storybook": "build-storybook",
     "storybook": "start-storybook -p 6006",
-    "build:tokens": "gulp build:tokens",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "build:theme": "gulp build:theme",
