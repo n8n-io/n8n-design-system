@@ -71,6 +71,8 @@
     "vue-template-compiler": "^2.6.11",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-clean-css": "^4.3.0",
-    "gulp-dart-sass": "^1.0.2"
+    "gulp-dart-sass": "^1.0.2",
+    "node-notifier": ">=8.0.1",
+    "trim": ">=0.0.3"
   }
 }
