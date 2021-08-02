@@ -34,7 +34,7 @@ export default {
     iconSize: {
       control: {
         type: "select",
-        options: ["sm", "md", "lg", "xl"],
+        options: ["sm", "md", "lg"],
       },
     },
     circle: {

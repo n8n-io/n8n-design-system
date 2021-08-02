@@ -24,7 +24,7 @@ export default {
       type: String,
       default: "md",
       validator: function (value: string): boolean {
-        return ["sm", "md", "lg", "xl"].indexOf(value) !== -1;
+        return ["sm", "md", "lg"].indexOf(value) !== -1;
       },
     },
     spin: {
@@ -49,12 +49,6 @@ export default {
 }
 
 ._lg {
-  font-size: 1em;
-  height: 1em;
-  width: 1em !important;
-}
-
-._xl {
   font-size: 1.22em;
   height: 1.22em;
   width: 1.22em !important;

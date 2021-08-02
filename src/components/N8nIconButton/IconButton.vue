@@ -2,11 +2,11 @@
   <n8n-button
     :type="props.type"
     :disabled="props.disabled"
-    :size="props.size === 'xl' ? 'lg' : props.size"
+    :size="props.size"
     :loading="props.loading"
     :title="props.title"
     :icon="props.icon"
-    :iconSize="props.iconSize || props.size"
+    :iconSize="props.size"
     :theme="props.theme"
     @click="(e) => listeners.click && listeners.click(e)"
     circle

@@ -10,7 +10,7 @@ export default {
     size: {
       control: {
         type: "select",
-        options: ["sm", "md", "lg", "xl"],
+        options: ["sm", "md", "lg"],
       },
     },
     spin: {
