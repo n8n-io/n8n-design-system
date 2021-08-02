@@ -16,7 +16,7 @@ npm run storybook
 
 ### Build static pages
 ```
-npm run build-storybook
+npm run build:storybook
 ```
 
 ### Run your unit tests

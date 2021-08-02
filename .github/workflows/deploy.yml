@@ -21,7 +21,7 @@ jobs:
       - name: build
         run: |
           npm install
-          npm run build-storybook
+          npm run build:storybook
           cd storybook-static
       - name: commit
         run: |
