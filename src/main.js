@@ -8,3 +8,13 @@ for (const key in components) {
 }
 
 export * from "./components";
+
+import Switch from 'element-ui/lib/switch';
+import Select from 'element-ui/lib/select';
+import Option from 'element-ui/lib/option';
+
+export {
+	Switch,
+	Select,
+	Option
+}
