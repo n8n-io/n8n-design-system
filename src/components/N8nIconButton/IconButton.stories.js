@@ -15,14 +15,8 @@ export default {
     size: {
       control: {
         type: "select",
-        options: ["sm", "md", "lg"],
+        options: ["sm", "md", "lg", "xl"],
       },
-    },
-    iconSize: {
-	control: {
-	  type: "select",
-	  options: ["sm", "md", "lg"],
-	},
     },
     loading: {
       control: {

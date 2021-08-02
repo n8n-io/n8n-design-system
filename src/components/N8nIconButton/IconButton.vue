@@ -6,7 +6,7 @@
     :loading="props.loading"
     :title="props.title"
     :icon="props.icon"
-    :iconSize="props.iconSize || props.size"
+    :iconSize="$options.iconSizeMap[props.size]"
     :theme="props.theme"
     @click="(e) => listeners.click && listeners.click(e)"
     circle
@@ -16,6 +16,13 @@
 <script lang="ts">
 import Vue from "vue";
 import N8nButton from "../N8nButton";
+
+const iconSizeMap = {
+	sm: "sm",
+	md: "md",
+	lg: "md",
+	xl: "lg"
+}
 
 Vue.component("N8nButton", N8nButton);
 
@@ -43,12 +50,10 @@ export default {
       type: String,
       required: true,
     },
-    iconSize: {
-      type: String
-    },
     theme: {
       type: String,
     },
   },
+  iconSizeMap,
 };
 </script>
