@@ -1,5 +1,5 @@
 import './font-awesome-icons';
-import '../src/styles/globals.scss';
+import './storybook.scss';
 
 import Vue from 'vue';
 

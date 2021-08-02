@@ -1,14 +1,77 @@
 @use "mixins/function";
 @use 'common/var';
 
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	overscroll-behavior-x: none;
+	line-height: 1;
+	font-size: var(--font-size-m);
+	color: var(--color-text-dark);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body, input {
+	font-family: var(--font-family);
+	font-weight: var(--font-weight-regular);
+}
+
+button {
+	font-weight: var(--font-weight-bold);
+}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display: block;
+}
+
+nav ul {
+   list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content: none;
+}
+
 a {
+  margin:0;
+  padding:0;
   color: var(--color-primary);
   text-decoration: none;
-
-  &:hover,
-  &:focus {
-    color: function.lightness(--color-primary-h, --color-primary-s, ---color-primary-l, var.$button-hover-tint-percent)
-  }
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  cursor: pointer;
 
   &:active {
     color: function.saturation(--color-primary-h, --color-primary-s, --color-primary-l, -(var.$button-active-shade-percent));
@@ -28,18 +91,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-h1 {
-  font-size: #{var.$font-size-base + 6px};
-}
-
-h2 {
-  font-size: #{var.$font-size-base + 4px};
-}
-
-h3 {
-  font-size: #{var.$font-size-base + 2px};
-}
-
 h4, h5, h6, p {
   font-size: inherit;
 }
@@ -56,17 +107,43 @@ p {
   }
 }
 
-sup, sub {
-  font-size: #{var.$font-size-base - 1px};
+ins {
+	background-color: var(--color-success);
+	color: var(--color-text-dark);
+	text-decoration:none;
 }
 
-small {
-  font-size: #{var.$font-size-base - 2px};
+mark {
+	background-color: var(--color-warning);
+	color: var(--color-text-dark); 
+	font-style: italic;
+	font-weight: bold;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+	border-bottom: 1px dotted;
+	cursor: help;
 }
 
 hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 0;
-  border-top: 1px solid #eeeeee;
+	display: block;
+	height: 1px;
+	border: 0;   
+	border-top: 1px solid var(--color-foreground-light);
+	margin: 1em 0;
+	padding: 0;
 }
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input, select {
+	vertical-align: middle;
+}
+
