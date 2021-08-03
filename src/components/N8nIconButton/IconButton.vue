@@ -2,7 +2,7 @@
   <n8n-button
     :type="props.type"
     :disabled="props.disabled"
-    :size="props.size"
+    :size="props.size === 'xl' ? 'lg' : props.size"
     :loading="props.loading"
     :title="props.title"
     :icon="props.icon"
@@ -37,6 +37,8 @@ export default {
     },
     size: {
       type: String,
+      validator: (value: string): boolean =>
+        ["sm", "md", "lg", "xl"].indexOf(value) !== -1,
     },
     loading: {
       type: Boolean,
