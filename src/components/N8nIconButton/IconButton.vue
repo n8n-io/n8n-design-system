@@ -18,11 +18,11 @@ import Vue from "vue";
 import N8nButton from "../N8nButton";
 
 const iconSizeMap = {
-	sm: "sm",
-	md: "md",
-	lg: "md",
-	xl: "lg"
-}
+  sm: "sm",
+  md: "md",
+  lg: "md",
+  xl: "lg",
+};
 
 Vue.component("N8nButton", N8nButton);
 

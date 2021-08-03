@@ -6,7 +6,7 @@ export declare class N8nIconButton extends N8nComponent {
   title: string;
 
   /** Button size */
-  size: N8nComponentSize | 'xl';
+  size: N8nComponentSize | "xl";
 
   /** icon size */
   iconSize: N8nComponentSize;
