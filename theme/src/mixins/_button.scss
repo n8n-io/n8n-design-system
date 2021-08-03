@@ -3,9 +3,13 @@
 @use "function";
 
 @mixin button-plain($color, $h, $s, $l) {
-  color: hsl(var(#{$h}), var(#{$s}), var(#{$l}));
-  background-color: var(--color-foreground-xlight);
-  border-color: hsl(var(#{$h}), var(#{$s}), var(#{$l}));
+  &,
+  &:focus,
+  &:hover {
+	color: hsl(var(#{$h}), var(#{$s}), var(#{$l}));
+	background-color: var(--color-foreground-xlight);
+	border-color: hsl(var(#{$h}), var(#{$s}), var(#{$l}));
+  }
 
   @include mixins.when(loading) {
 	color: function.lightness($h, $s, $l, var.$button-hover-tint-percent);
