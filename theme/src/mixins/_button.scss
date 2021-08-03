@@ -1,13 +1,14 @@
 @use "../common/var";
+@use './mixins';
 @use "function";
 
 @mixin button-plain($color, $h, $s, $l) {
   color: hsl(var(#{$h}), var(#{$s}), var(#{$l}));
   background-color: var(--color-foreground-xlight);
-  border-color: function.lightness($h, $s, $l, var.$button-hover-tint-percent);
+  border-color: hsl(var(#{$h}), var(#{$s}), var(#{$l}));
 
-  &:hover {
-	color: hsl(var(#{$h}), var(#{$s}), var(#{$l}));
+  @include mixins.when(loading) {
+	color: function.lightness($h, $s, $l, var.$button-hover-tint-percent);
 	background-color: var(--color-foreground-xlight);
 	border-color: function.lightness($h, $s, $l, var.$button-hover-tint-percent);
   }
