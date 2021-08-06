@@ -13,7 +13,7 @@ export default {
     },
     type: {
       control: "select",
-      options: ["primary", "outline", "light"],
+      options: ["primary", "outline", "light", "text"],
     },
     size: {
       control: {
@@ -113,3 +113,11 @@ WithIcon.args = {
   label: "Button",
   icon: "plus-circle",
 };
+
+export const Text = ManyTemplate.bind({});
+Text.args = {
+  type: "text",
+  label: "Button",
+  icon: "plus-circle",
+};
+

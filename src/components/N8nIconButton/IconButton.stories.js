@@ -7,7 +7,7 @@ export default {
   argTypes: {
     type: {
       control: "select",
-      options: ["primary", "outline", "light"],
+      options: ["primary", "outline", "light", "text"],
     },
     title: {
       control: "text",
@@ -88,4 +88,11 @@ Light.args = {
   icon: "plus",
   title: "my title",
   type: "light",
+};
+
+export const Text = ManyTemplate.bind({});
+Text.args = {
+  icon: "plus",
+  title: "my title",
+  type: "text",
 };

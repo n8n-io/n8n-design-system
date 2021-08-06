@@ -1,7 +1,6 @@
 <template functional>
   <component
     :is="$options.components.ElButton"
-    :type="props.theme || 'primary'"
     :plain="props.type === 'outline'"
     :disabled="props.disabled"
     :size="$options.mapToSize(props.size)"
@@ -54,7 +53,7 @@ export default {
       type: String,
       default: "primary",
       validator: (value: string): boolean =>
-        ["primary", "outline", "light"].indexOf(value) !== -1,
+        ["primary", "outline", "light", "text"].indexOf(value) !== -1,
     },
     theme: {
       type: String,
@@ -111,7 +110,7 @@ export default {
     };
   },
   getClass(props: {type: string, theme?: string}) {
-	return `${props.type}-${props.theme || 'primary'}`;
+	return props.type === 'text' ? 'text' : `${props.type}-${props.theme || 'primary'}`;
   },
 };
 </script>
@@ -279,6 +278,16 @@ $color-danger-shade: lightness(
 	--button-active-background-color: var(--color-danger-tint-2);
 	--button-active-color: #{$color-danger-shade};
 	--button-active-border-color: #{$color-danger-shade};
+}
+
+.text {
+	composes: button;
+	--button-color: var(--color-text-light);
+	--button-border-color: transparent;
+	--button-background-color: transparent;
+	--button-active-background-color: transparent;
+	--button-active-color: var(--color-primary);
+	--button-active-border-color: transparent;
 }
 
 .icon {
