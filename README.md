@@ -28,3 +28,13 @@ npm run test:unit
 ```
 npm run lint
 ```
+
+### Build css files
+```
+npm run build:theme
+```
+
+### Monitor theme files and build any changes
+```
+npm run watch:theme
+```
