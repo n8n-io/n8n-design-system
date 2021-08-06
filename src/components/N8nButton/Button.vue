@@ -273,9 +273,9 @@ $color-danger-shade: lightness(
 .light-danger {
 	composes: button;
 	--button-color: var(--color-danger);
-	--button-border-color: var(--color-danger-tint-2);
-	--button-background-color: var(--color-danger-tint-2);
-	--button-active-background-color: var(--color-danger-tint-2);
+	--button-border-color: var(--color-danger-tint-1);
+	--button-background-color: var(--color-danger-tint-1);
+	--button-active-background-color: var(--color-danger-tint-1);
 	--button-active-color: #{$color-danger-shade};
 	--button-active-border-color: #{$color-danger-shade};
 }
