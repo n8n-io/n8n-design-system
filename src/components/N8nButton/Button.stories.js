@@ -47,7 +47,7 @@ export default {
     },
     theme: {
       type: "select",
-      options: ["success", "danger", "warning", "info"],
+      options: ["success", "danger", "warning"],
     },
     float: {
       type: "select",

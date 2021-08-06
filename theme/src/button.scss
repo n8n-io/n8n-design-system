@@ -1,48 +1,67 @@
 @charset "UTF-8";
-@use 'common/var';
-@use 'mixins/button';
 @use 'mixins/mixins';
 @use 'mixins/utils';
 @use 'mixins/function';
+
+$active-shade-percent: 10%;
+$color-primary-shade: function.lightness(
+	--color-primary-h,
+	--color-primary-s,
+	--color-primary-l,
+	-($active-shade-percent)
+);
+
+$font-weight: var(--font-weight-bold);
+$font-size: var(--button-font-size, var(--font-size-s));
+
+$padding-vertical: var(--button-padding-vertical, var(--spacing-xs));
+$padding-horizontal: var(--button-padding-horizontal, var(--spacing-m));
+
+$border-width: var(--border-width-base);
+$border-style: var(--border-style-base);
+$border-radius: var(--button-border-radius, 20px);
+$border-color: var(--button-border-color, var(--color-primary));
+
+$color: var(--button-color, var(--color-text-xlight));
+$background-color: var(--button-background-color, var(--color-primary));
+
+$active-color: var(--button-active-color, var(--color-text-xlight));
+$active-border-color: var(--button-active-border-color, $color-primary-shade);
+$active-background-color: var(--button-active-background-color, $color-primary-shade);
+
+$disabled-color: var(--color-text-light);
+$disabled-background-color: var(--button-disabled-background-color, var(--color-foreground-base));
+$disabled-border-color: var(--color-foreground-base);
+
+$loading-overlay-background-color: rgba(255, 255, 255, 0.35);
 
 @include mixins.b(button) {
   display: inline-block;
   line-height: 1;
   white-space: nowrap;
   cursor: pointer;
-  border: var(--border-base);
-  color: var(--color-text-base);
-  background-color: var(--color-foreground-xlight);
+
+  border: $border-width $border-color $border-style;
+  color: $color;
+  background-color: $background-color;
+  font-weight: $font-weight;
+  border-radius: $border-radius;
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+
   -webkit-appearance: none;
   text-align: center;
   box-sizing: border-box;
   outline: none;
   margin: 0;
   transition: 0.1s;
-  font-weight: var(--font-weight-bold);
-  border-radius: var(--border-radius-base);
 
   @include utils.utils-user-select(none);
 
-  @include button.button-size(
-    var(--spacing-xs),
-    var(--spacing-m),
-    var(--font-size-s),
-  );
-
   &:active {
-    color: function.lightness(
-      --color-foreground-xlight-h,
-      --color-foreground-xlight-s,
-      --color-foreground-xlight-l,
-      -(var.$button-active-shade-percent)
-    );
-    border-color: function.lightness(
-      --color-foreground-xlight-h,
-      --color-foreground-xlight-s,
-      --color-foreground-xlight-l,
-      -(var.$button-active-shade-percent)
-    );
+    color: $active-color;
+    border-color: $active-border-color;
+    background-color: $active-background-color;
     outline: none;
   }
 
@@ -50,227 +69,62 @@
     border: 0;
   }
 
-  @include mixins.when(disabled) {
-    &,
-    &:hover,
-    &:focus {
-      cursor: not-allowed;
-      background-image: none;
-    }
-
-    &.el-button--text {
-      background-color: transparent;
-    }
-  }
-
   @include mixins.when(loading) {
-    position: relative;
-    pointer-events: none;
+	position: relative;
+	pointer-events: none;
+    
+	&:before {
+	  pointer-events: none;
+	  content: '';
+	  position: absolute;
+	  left: -1px;
+	  top: -1px;
+	  right: -1px;
+	  bottom: -1px;
+	  border-radius: inherit;
+	  background-color: $loading-overlay-background-color;
+	}
+  }
 
-    &:before {
-      pointer-events: none;
-      content: '';
-      position: absolute;
-      left: -1px;
-      top: -1px;
-      right: -1px;
-      bottom: -1px;
-      border-radius: inherit;
-      background-color: rgba(255, 255, 255, 0.35);
-    }
+  @include mixins.when(disabled) {
+	&,
+	&:hover,
+	&:active,
+	&:focus {
+	  cursor: not-allowed;
+	  background-image: none;
+	  color: $disabled-color;
+	  background-color: $disabled-background-color;
+	  border-color: $disabled-border-color;
+	}
   }
-  @include mixins.when(round) {
-    border-radius: var(--button-radius-round);
-  }
+
   @include mixins.when(circle) {
-    border-radius: var(--button-radius-circle);
-    padding: var(--spacing-xs);
-  }
-  @include mixins.m(primary) {
-    @include button.button-variant(
-      var.$button-primary-font-color,
-      var.$button-primary-background-color,
-      var.$button-primary-border-color,
-      --color-primary-h,
-      --color-primary-s,
-      --color-primary-l,
-      --color-primary-tint-2-l
-    );
-  }
-  @include mixins.m(success) {
-    @include button.button-variant(
-      var.$button-success-font-color,
-      var.$button-success-background-color,
-      var.$button-success-border-color,
-      --color-success-h,
-      --color-success-s,
-      --color-success-l,
-      --color-success-tint-1-l
-    );
-  }
-  @include mixins.m(warning) {
-    @include button.button-variant(
-      var.$button-warning-font-color,
-      var.$button-warning-background-color,
-      var.$button-warning-border-color,
-      --color-warning-h,
-      --color-warning-s,
-      --color-warning-l,
-      --color-warning-tint-2-l
-    );
-  }
-  @include mixins.m(danger) {
-    @include button.button-variant(
-      var.$button-danger-font-color,
-      var.$button-danger-background-color,
-      var.$button-danger-border-color,
-      --color-danger-h,
-      --color-danger-s,
-      --color-danger-l,
-      --color-danger-tint-1-l
-    );
-  }
-  @include mixins.m(info) {
-    @include button.button-variant(
-      var.$button-info-font-color,
-      var.$button-info-background-color,
-      var.$button-info-border-color,
-      --color-info-h,
-      --color-info-s,
-      --color-info-l,
-      --color-info-tint-1-l
-    );
-  }
+	border-radius: 50%;
 
-  @include mixins.m(medium) {
-    @include button.button-medium();
-
-    @include mixins.when(circle) {
-      padding: var(--spacing-2xs);
-    }
+	--button-padding-vertical: var(--spacing-xs);
+	--button-padding-horizontal: var(--spacing-xs);
   }
 
   @include mixins.m(small) {
-    @include button.button-small();
+	--button-padding-vertical: var(--spacing-3xs);
+	--button-padding-horizontal: var(--spacing-xs);
+	--button-font-size: var(--font-size-2xs);
+    
+	@include mixins.when(circle) {
+		--button-padding-vertical: var(--spacing-3xs);
+		--button-padding-horizontal: var(--spacing-3xs);
+	}
+   }
 
-    @include mixins.when(circle) {
-      padding: var(--spacing-3xs);
-    }
-  }
+   @include mixins.m(medium) {
+	--button-padding-vertical: var(--spacing-2xs);
+	--button-padding-horizontal: var(--spacing-xs);
+	--button-font-size: var(--font-size-2xs);
 
-  @include mixins.m(mini) {
-    @include button.button-small();
-
-    @include mixins.when(circle) {
-      padding: var(--spacing-4xs);
-    }
-  }
-
-  @include mixins.m(text) {
-    border-color: transparent;
-    color: var(--color-primary);
-    background: transparent;
-    padding-left: 0;
-    padding-right: 0;
-
-    &:hover {
-      border-color: transparent;
-      background-color: transparent;
-    }
-
-    &:active {
-      color: function.saturation(
-        --color-primary-h,
-        --color-primary-s,
-        --color-primary-l,
-        -(var.$button-active-shade-percent)
-      );
-      border-color: transparent;
-      background-color: transparent;
-    }
-
-    &.is-disabled,
-    &.is-disabled:hover,
-    &.is-disabled:focus {
-      border-color: transparent;
-    }
-  }
-}
-
-@include mixins.b(button-group) {
-  @include utils.utils-clearfix;
-  display: inline-block;
-  vertical-align: middle;
-
-  & > .el-button {
-    float: left;
-    position: relative;
-    & + .el-button {
-      margin-left: 0;
-    }
-    &.is-disabled {
-      z-index: 1;
-    }
-    &:first-child {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-    &:last-child {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-    &:first-child:last-child {
-      border-top-right-radius: var(--border-radius-base);
-      border-bottom-right-radius: var(--border-radius-base);
-      border-top-left-radius: var(--border-radius-base);
-      border-bottom-left-radius: var(--border-radius-base);
-
-      &.is-round {
-        border-radius: 20px;
-      }
-
-      &.is-circle {
-        border-radius: 50%;
-      }
-    }
-    &:not(:first-child):not(:last-child) {
-      border-radius: 0;
-    }
-    &:not(:last-child) {
-      margin-right: -1px;
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-      z-index: 1;
-    }
-
-    @include mixins.when(active) {
-      z-index: 1;
-    }
-  }
-
-  & > .el-dropdown {
-    & > .el-button {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-      border-left-color: rgba(var.$color-white, 0.5);
-    }
-  }
-
-  @each $type in (primary, success, warning, danger, info) {
-    .el-button--#{$type} {
-      &:first-child {
-        border-right-color: rgba(var.$color-white, 0.5);
-      }
-      &:last-child {
-        border-left-color: rgba(var.$color-white, 0.5);
-      }
-      &:not(:first-child):not(:last-child) {
-        border-left-color: rgba(var.$color-white, 0.5);
-        border-right-color: rgba(var.$color-white, 0.5);
-      }
-    }
-  }
+	@include mixins.when(circle) {
+		--button-padding-vertical: var(--spacing-2xs);
+		--button-padding-horizontal: var(--spacing-2xs);
+	}
+   }
 }

@@ -96,7 +96,6 @@
   }
 
   @include mixins.e(link-btn) {
-    @include button.button-round();
     @include button.button-outline();
     @include button.button-small();
 
