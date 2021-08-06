@@ -4,6 +4,10 @@
  */
 
 @mixin theme {
+  --brand-name: "n8n.io";
+  --brand-image-url: url("http://localhost:5678/n8n-icon-small.png");
+  --brand-url: "https://n8n.io";
+
   --color-primary-h: 6.9;
   --color-primary-s: 100%;
   --color-primary-l: 67.6%;
